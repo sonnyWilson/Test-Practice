@@ -1,220 +1,5056 @@
 ==QUESTION==
-TOPIC: Linear Equations in Linear Algebra
-TEXT: How many possible solution outcomes exist for any system of linear equations?
+TOPIC: Systems of Linear Equations
+TEXT: Which of the following describes a linear system?
 
-1. Exactly 1 or 2
-2. No solution, exactly one solution, or infinitely many solutions
-3. Unique solution or infinitely many solutions only
-4. Exactly zero, one, two, or infinitely many solutions
+1. A single nonlinear differential equation
+2. A collection of equations, each a linear combination of variables set equal to a constant
+3. A set of quadratic equations with real roots
+4. An equation where variables are multiplied together
 
 ANSWER: 2
-EXPLANATION: Every linear system has either no solution (inconsistent), exactly one solution (unique), or infinitely many solutions. There is no middle ground, such as exactly two or three solutions.
+EXPLANATION: A linear system is a collection of equations, each of which is a linear combination of variables set equal to a constant.
 ==END==
 
 ==QUESTION==
-TOPIC: Linear Equations in Linear Algebra
-TEXT: When identifying pivot columns for a linear space or subspace determination, from which matrix must the original vectors be selected?
+TOPIC: Systems of Linear Equations
+TEXT: What are the possible outcomes for the number of solutions to a system of linear equations?
 
-1. The fully reduced row echelon form (RREF) matrix
-2. Any intermediate row echelon matrix
-3. The original matrix prior to row operations
-4. The transpose of the reduced matrix
+1. Zero, one, or infinitely many
+2. Exactly two or three
+3. One, two, or infinitely many
+4. Always exactly one solution
+
+ANSWER: 1
+EXPLANATION: Any system of linear equations has either no solution, exactly one solution, or infinitely many solutions. There is no fourth option.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: What matrix structure packages coefficients and constants together for row reduction?
+
+1. Identity matrix
+2. Diagonal matrix
+3. Augmented matrix
+4. Transpose matrix
 
 ANSWER: 3
-EXPLANATION: Pivot positions are found by reducing the matrix, but pivot columns must always be identified from the *original* matrix A, not from the row-reduced form.
+EXPLANATION: The augmented matrix packages the system's coefficients and constants together in preparation for performing row operations.
 ==END==
 
 ==QUESTION==
-TOPIC: Linear Equations in Linear Algebra
-TEXT: Under what condition is the matrix equation Ax = b consistent for EVERY vector b in R^m?
+TOPIC: Systems of Linear Equations
+TEXT: If a linear system has two distinct solutions, how many solutions must it actually have?
 
-1. Matrix A has a pivot in every column
-2. Matrix A has a pivot in every row
-3. Matrix A is a square matrix
-4. The homogeneous system Ax = 0 has a nontrivial solution
-
-ANSWER: 2
-EXPLANATION: Ax = b is consistent for every b in R^m if and only if the columns of A span R^m, which is equivalent to A having a pivot position in every row.
-==END==
-
-==QUESTION==
-TOPIC: Linear Equations in Linear Algebra
-TEXT: Which of the following conditions automatically imply that a set of vectors {v1, v2, ..., vp} in R^n is linearly dependent? (Select TWO.)
-
-1. The number of vectors p is strictly greater than n (p > n)
-2. The set contains the zero vector
-3. The vectors are all orthogonal to each other
-4. The set spans R^n
-
-ANSWER: 1,2
-EXPLANATION: By shortcut theorems: (1) If p > n, there are more vectors than dimensions, guaranteeing at least one free variable and linear dependence. (2) Any set containing the zero vector is automatically linearly dependent.
-==END==
-
-==QUESTION==
-TOPIC: Matrix Algebra
-TEXT: Let A be an n x n invertible matrix. According to the Invertible Matrix Theorem (IMT), which of the following statements are equivalent to A being invertible? (Select TWO.)
-
-1. The determinant of A is nonzero (det A != 0)
-2. The columns of A span R^n
-3. Ax = 0 has infinitely many solutions
-4. A has at most n - 1 pivot positions
-
-ANSWER: 1,2
-EXPLANATION: The IMT states that for an n x n matrix, invertibility is equivalent to having n pivot positions, det(A) != 0, linearly independent columns, columns spanning R^n, and Ax = 0 having only the trivial solution.
-==END==
-
-==QUESTION==
-TOPIC: Matrix Algebra
-TEXT: What is the correct inverse matrix formula for a 2x2 matrix A = [[a, b], [c, d]] where det(A) != 0?
-
-1. (1 / (ad - bc)) * [[a, b], [c, d]]
-2. (1 / (ad - bc)) * [[d, -b], [-c, a]]
-3. (1 / (ad + bc)) * [[d, -b], [-c, a]]
-4. (1 / (ad - bc)) * [[-a, c], [b, -d]]
-
-ANSWER: 2
-EXPLANATION: The standard 2x2 inverse formula swaps the main diagonal entries (a and d), negates the off-diagonal entries (b and c), and scales the matrix by 1 / det(A), where det(A) = ad - bc.
-==END==
-
-==QUESTION==
-TOPIC: Matrix Algebra
-TEXT: For an m x n matrix A, what is the relationship given by the Rank-Nullity Theorem?
-
-1. dim(Nul A) + rank(A) = m (number of rows)
-2. dim(Nul A) + rank(A) = n (number of columns)
-3. dim(Col A) + dim(Row A) = n
-4. rank(A) - dim(Nul A) = n
-
-ANSWER: 2
-EXPLANATION: The Rank-Nullity Theorem states that for any matrix with n columns, dim(Nul A) + rank(A) = n, where rank(A) is dim(Col A) or the number of pivot columns.
-==END==
-
-==QUESTION==
-TOPIC: Determinants
-TEXT: How does performing a row replacement operation (Ri -> Ri + k*Rj) affect the determinant of a square matrix A?
-
-1. It multiplies the determinant by k
-2. It changes the sign of the determinant
-3. It leaves the determinant unchanged
-4. It sets the determinant to zero
+1. Exactly 2
+2. Exactly 3
+3. Infinitely many
+4. None
 
 ANSWER: 3
-EXPLANATION: Row replacement operations do not alter the determinant of a matrix. Row swaps flip the sign, and scaling a row by k scales the determinant by k.
+EXPLANATION: Since the only possible outcomes for a linear system are no solution, exactly one solution, or infinitely many solutions, having more than one solution forces the system to have infinitely many solutions.
 ==END==
 
 ==QUESTION==
-TOPIC: Determinants
-TEXT: If A is an n x n matrix and c is a scalar, what is det(cA)?
+TOPIC: Systems of Linear Equations
+TEXT: A system of linear equations is called inconsistent if it has:
+
+1. Exactly one solution
+2. Infinitely many solutions
+3. No solution
+4. Only zero coefficients
+
+ANSWER: 3
+EXPLANATION: A linear system is defined to be inconsistent if it has no solution.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: In an echelon form of a matrix, which of the following is true?
+
+1. All zero rows are at the top of the matrix
+2. All nonzero rows are above any zero rows
+3. Each leading entry must be equal to 0
+4. Every entry above a leading entry must be 0
+
+ANSWER: 2
+EXPLANATION: In echelon form, all nonzero rows are located above any rows of all zeros.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: Which additional property distinguishes Reduced Echelon Form (RREF) from standard echelon form?
+
+1. All entries below leading entries are zero
+2. Leading entries are 1 and are the only nonzero entries in their respective columns
+3. The matrix must be square
+4. All rows must be non-zero
+
+ANSWER: 2
+EXPLANATION: Reduced echelon form requires that all leading entries are 1 and that each leading 1 is the only nonzero entry in its column.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: When identifying the pivot columns of a matrix A after row reducing to echelon form, which columns should be selected?
+
+1. The columns of the row-reduced echelon matrix containing leading entries
+2. The columns of the original matrix A corresponding to the pivot positions
+3. The rows of the original matrix A containing zeros
+4. The last column of the augmented matrix only
+
+ANSWER: 2
+EXPLANATION: Pivot columns must always be identified from the original matrix corresponding to the pivot positions found during row reduction.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: While row reducing an augmented matrix, you obtain the row [0 0 0 | 5]. What does this indicate about the system?
+
+1. Unique solution x_3 = 5
+2. Infinitely many solutions with x_3 as a free variable
+3. The system is inconsistent (no solution)
+4. The trivial solution exists
+
+ANSWER: 3
+EXPLANATION: A row of the form [0 ... 0 | nonzero] represents the equation 0 = nonzero, which is a contradiction, making the system inconsistent.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: In a consistent linear system, free variables correspond to:
+
+1. Pivot columns
+2. Columns without pivot positions
+3. Rows containing all zeros
+4. The rightmost augmented column
+
+ANSWER: 2
+EXPLANATION: Variables corresponding to columns that do not contain pivot positions are free variables.
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: The vector equation x_1*a_1 + x_2*a_2 + ... + x_n*a_n = b has the same solution set as the linear system with which augmented matrix?
+
+1. [a_1 + a_2 + ... + a_n | b]
+2. [a_1  a_2  ...  a_n | b]
+3. [b  a_1  a_2  ...  a_n]
+4. [a_1  a_2  ...  a_n  b] without a bar
+
+ANSWER: 2
+EXPLANATION: A vector equation corresponds directly to the linear system whose augmented matrix is [a_1 a_2 ... a_n | b].
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: Geometrically, Span{v_1, v_2} in R^3 (where v_1 and v_2 are non-parallel) represents:
+
+1. A single point
+2. A line passing through the origin
+3. A plane passing through the origin
+4. All of R^3
+
+ANSWER: 3
+EXPLANATION: The span of two linearly independent (non-parallel) vectors in R^3 forms a plane passing through the origin.
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: What is Span{v_1, ..., v_p}?
+
+1. The sum of all scalar multipliers
+2. The set of all linear combinations of v_1, ..., v_p
+3. The set of vectors orthogonal to v_1
+4. The product of all vectors v_1 through v_p
+
+ANSWER: 2
+EXPLANATION: Span{v_1, ..., v_p} is defined as the set of all possible linear combinations c_1*v_1 + ... + c_p*v_p.
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: Does the zero vector always belong to Span{v_1, v_2, ..., v_p}?
+
+1. Yes, by choosing all scalar coefficients to be zero
+2. No, unless one of the vectors is zero
+3. Only if p > n
+4. Only if the vectors are linearly dependent
+
+ANSWER: 1
+EXPLANATION: Setting all coefficients c_1 = c_2 = ... = c_p = 0 gives 0*v_1 + ... + 0*v_p = 0, so the zero vector is always in the span.
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: Is a vector b in Span{a_1, a_2, a_3} if the system [a_1 a_2 a_3 | b] is inconsistent?
+
+1. Yes
+2. No
+3. Only if a_1 is zero
+4. Cannot be determined
+
+ANSWER: 2
+EXPLANATION: b is in Span{a_1, a_2, a_3} if and only if the system represented by [a_1 a_2 a_3 | b] is consistent.
+==END==
+
+==QUESTION==
+TOPIC: The Matrix Equation Ax = b
+TEXT: The matrix equation Ax = b has a solution if and only if:
+
+1. b is a linear combination of the columns of A
+2. A is a square matrix
+3. b is the zero vector
+4. A has a row of zeros
+
+ANSWER: 1
+EXPLANATION: Ax is defined as a linear combination of the columns of A; thus Ax = b has a solution iff b is in Col A (a linear combination of A's columns).
+==END==
+
+==QUESTION==
+TOPIC: The Matrix Equation Ax = b
+TEXT: The equation Ax = b is consistent for EVERY b in R^m if and only if A has:
+
+1. A pivot position in every column
+2. A pivot position in every row
+3. A determinant equal to zero
+4. More columns than rows
+
+ANSWER: 2
+EXPLANATION: A matrix equation Ax = b has a solution for every b in R^m iff the columns of A span R^m, which requires a pivot position in every row of A.
+==END==
+
+==QUESTION==
+TOPIC: The Matrix Equation Ax = b
+TEXT: If A is an m x n matrix and x is in R^n, then Ax is a vector in:
+
+1. R^n
+2. R^m
+3. R^(m+n)
+4. R^(m*n)
+
+ANSWER: 2
+EXPLANATION: Multiplying an m x n matrix by an n x 1 column vector yields an m x 1 vector in R^m.
+==END==
+
+==QUESTION==
+TOPIC: The Matrix Equation Ax = b
+TEXT: If A is a 3 x 4 matrix, how many entries must be in the vector x for Ax to be defined?
+
+1. 3
+2. 4
+3. 7
+4. 12
+
+ANSWER: 2
+EXPLANATION: For matrix-vector multiplication Ax, the dimension of x must match the number of columns of A, which is 4.
+==END==
+
+==QUESTION==
+TOPIC: The Matrix Equation Ax = b
+TEXT: If the columns of an m x n matrix A span R^m, then the number of pivots in A must be:
+
+1. Equal to n
+2. Equal to m
+3. Greater than m
+4. Less than m
+
+ANSWER: 2
+EXPLANATION: To span R^m, A must have a pivot in every row, meaning it must have exactly m pivots.
+==END==
+
+==QUESTION==
+TOPIC: Solution Sets of Linear Systems
+TEXT: A homogeneous linear system Ax = 0:
+
+1. May be inconsistent
+2. Always has at least the trivial solution x = 0
+3. Never has nontrivial solutions
+4. Is consistent only if A is square
+
+ANSWER: 2
+EXPLANATION: Ax = 0 always has x = 0 as a solution, known as the trivial solution; thus homogeneous systems are always consistent.
+==END==
+
+==QUESTION==
+TOPIC: Solution Sets of Linear Systems
+TEXT: A homogeneous system Ax = 0 has a nontrivial solution if and only if the system has:
+
+1. No free variables
+2. At least one free variable
+3. More rows than columns
+4. A pivot in every column
+
+ANSWER: 2
+EXPLANATION: Nontrivial solutions exist if and only if there is at least one free variable (rank(A) < number of variables).
+==END==
+
+==QUESTION==
+TOPIC: Solution Sets of Linear Systems
+TEXT: The parametric vector form of the general solution to Ax = b (when consistent) expresses solutions as:
+
+1. A single scalar value
+2. One particular solution p plus all solutions to the homogeneous equation Ax = 0
+3. The determinant of A times x
+4. A linear combination of the rows of A
+
+ANSWER: 2
+EXPLANATION: The solution set to Ax = b is a translation of the solution space of Ax = 0 by a particular solution p (x = p + v_h).
+==END==
+
+==QUESTION==
+TOPIC: Solution Sets of Linear Systems
+TEXT: If Ax = b is consistent and the solution set of Ax = 0 is a line through the origin, what is the solution set of Ax = b?
+
+1. A plane through the origin
+2. A line parallel to the solution set of Ax = 0 passing through a particular solution p
+3. A single point at the origin
+4. The empty set
+
+ANSWER: 2
+EXPLANATION: Geometrically, adding a particular solution p translates the line solution set of Ax = 0 to a parallel line passing through p.
+==END==
+
+==QUESTION==
+TOPIC: Solution Sets of Linear Systems
+TEXT: If a 4 x 5 matrix A has 3 pivot positions, how many free variables does the homogeneous system Ax = 0 have?
+
+1. 1
+2. 2
+3. 3
+4. 5
+
+ANSWER: 2
+EXPLANATION: Number of free variables = total columns (5) - pivot columns (3) = 2.
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: A set of vectors {v_1, ..., v_p} is linearly independent if the vector equation c_1*v_1 + ... + c_p*v_p = 0 has:
+
+1. Infinitely many solutions
+2. Only the trivial solution c_1 = ... = c_p = 0
+3. At least one non-zero coefficient c_i
+4. No solution
+
+ANSWER: 2
+EXPLANATION: Linear independence means the zero vector can only be written as a linear combination with all coefficients equal to zero.
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: According to shortcut theorems, a set of p vectors in R^n is automatically linearly dependent if:
+
+1. p < n
+2. p > n
+3. p = n
+4. None of the vectors is zero
+
+ANSWER: 2
+EXPLANATION: If p > n, there are more vectors than dimensions/entries per vector, guaranteeing free variables and linear dependence.
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: Any set of vectors containing the zero vector is:
+
+1. Linearly independent
+2. Linearly dependent
+3. A basis for R^n
+4. Orthogonal
+
+ANSWER: 2
+EXPLANATION: A set containing the zero vector is always linearly dependent because assigning a nonzero scalar to the zero vector yields a non-trivial zero combination.
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: Two non-zero vectors v_1 and v_2 are linearly dependent if and only if:
+
+1. Their dot product is zero
+2. One vector is a scalar multiple of the other
+3. They span R^2
+4. They are perpendicular
+
+ANSWER: 2
+EXPLANATION: Two vectors are linearly dependent if and only if they lie on the same line through the origin, which means one is a scalar multiple of the other.
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: If {v_1, v_2, v_3} is linearly independent, which of the following must be true?
+
+1. None of the vectors is a linear combination of the others
+2. v_1 + v_2 = v_3
+3. The set contains the zero vector
+4. The vectors span R^3
+
+ANSWER: 1
+EXPLANATION: Linear independence implies that no vector in the set can be represented as a linear combination of the remaining vectors.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: A transformation T: R^n -> R^m is linear if for all vectors u, v and scalars c:
+
+1. T(u+v) = T(u) + T(v) and T(cu) = cT(u)
+2. T(uv) = T(u)T(v)
+3. T(u-v) = T(u)T(v)
+4. T(u) = u + c
+
+ANSWER: 1
+EXPLANATION: Linearity requires preservation of vector addition [T(u+v) = T(u)+T(v)] and scalar multiplication [T(cu) = cT(u)].
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: The columns of the standard matrix A for a linear transformation T: R^n -> R^m are given by:
+
+1. T(0)
+2. Images of the standard basis vectors T(e_1), T(e_2), ..., T(e_n)
+3. The eigenvalues of T
+4. The transpose of the identity matrix
+
+ANSWER: 2
+EXPLANATION: The standard matrix A = [T(e_1) T(e_2) ... T(e_n)], where e_i are the standard basis vectors for R^n.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: A linear transformation T: R^n -> R^m is onto R^m if and only if the columns of its standard matrix A:
+
+1. Are linearly independent
+2. Span R^m
+3. Contain the zero vector
+4. Are equal to each other
+
+ANSWER: 2
+EXPLANATION: T is onto R^m iff for every b in R^m there exists x such that T(x) = Ax = b, which means the columns of A must span R^m.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: A linear transformation T: R^n -> R^m is one-to-one if and only if the columns of its standard matrix A:
+
+1. Span R^m
+2. Are linearly independent
+3. Are orthogonal
+4. Contain free variables
+
+ANSWER: 2
+EXPLANATION: T is one-to-one iff T(x) = 0 has only the trivial solution, which is equivalent to the columns of A being linearly independent.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: For any linear transformation T, what is T(0)?
+
+1. 1
+2. 0
+3. Undefined
+4. Depends on the matrix entries
+
+ANSWER: 2
+EXPLANATION: For any linear transformation T, T(0) = T(0 * 0) = 0 * T(0) = 0.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: What requirement must be met to perform matrix addition or subtraction between two matrices A and B?
+
+1. Both matrices must be square
+2. They must have the exact same dimensions
+3. The number of columns in A must equal the number of rows in B
+4. Their determinants must be nonzero
+
+ANSWER: 2
+EXPLANATION: Matrix addition and subtraction are performed entrywise, which requires both matrices to have identical dimensions (m x n).
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: In general, matrix multiplication is:
+
+1. Commutative (AB = BA)
+2. Not commutative (AB != BA)
+3. Always undefined for square matrices
+4. Equivalent to entrywise multiplication
+
+ANSWER: 2
+EXPLANATION: Matrix multiplication is non-commutative in general; AB is not necessarily equal to BA.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: If A is a 2 x 3 matrix and B is a 3 x 4 matrix, what are the dimensions of the product AB?
+
+1. 3 x 3
+2. 2 x 4
+3. 4 x 2
+4. Product is undefined
+
+ANSWER: 2
+EXPLANATION: Multiplying (2 x 3) by (3 x 4) yields a matrix with dimension equal to the outer indices: 2 x 4.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: What is the transpose of a product of matrices (AB)^T equal to?
+
+1. A^T * B^T
+2. B^T * A^T
+3. A * B^T
+4. (AB)^(-1)
+
+ANSWER: 2
+EXPLANATION: The transpose of a matrix product reverses the order of multiplication: (AB)^T = B^T * A^T.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: What is the difference between (kI)A and kI - A for a square matrix A and scalar k?
+
+1. They are identical operations
+2. (kI)A is scalar multiplication kA; kI - A is matrix subtraction
+3. (kI)A is matrix addition; kI - A is scalar division
+4. Neither operation is mathematically defined
+
+ANSWER: 2
+EXPLANATION: (kI)A scales A by k (since kI acts like scalar k), whereas kI - A subtracts A from the scaled identity matrix kI entrywise.
+==END==
+
+==QUESTION==
+TOPIC: The Inverse of a Matrix
+TEXT: For a 2x2 matrix A = [[a, b], [c, d]], what is the formula for A^(-1) assuming det(A) != 0?
+
+1. (1/det A) * [[d, -b], [-c, a]]
+2. (1/det A) * [[a, -c], [-b, d]]
+3. (1/det A) * [[-a, b], [c, -d]]
+4. det(A) * [[d, b], [c, a]]
+
+ANSWER: 1
+EXPLANATION: The 2x2 inverse formula swaps diagonal entries, negates off-diagonal entries, and divides by det A = ad - bc.
+==END==
+
+==QUESTION==
+TOPIC: The Inverse of a Matrix
+TEXT: What is the general algorithm to find the inverse of an n x n matrix A?
+
+1. Multiply A by its transpose
+2. Row reduce the augmented matrix [A | I] to [I | A^(-1)]
+3. Compute the determinant and divide every entry by it
+4. Swap all rows with columns
+
+ANSWER: 2
+EXPLANATION: Row reducing [A | I_n] converts the left side to I_n and transforms the right side into A^(-1), provided A is invertible.
+==END==
+
+==QUESTION==
+TOPIC: The Inverse of a Matrix
+TEXT: A square matrix A is called singular if:
+
+1. det(A) != 0
+2. A is invertible
+3. det(A) = 0 (it has no inverse)
+4. A is the identity matrix
+
+ANSWER: 3
+EXPLANATION: A matrix is singular if its determinant is zero, meaning it does not possess an inverse.
+==END==
+
+==QUESTION==
+TOPIC: The Inverse of a Matrix
+TEXT: If A and B are invertible n x n matrices, what is (AB)^(-1)?
+
+1. A^(-1) * B^(-1)
+2. B^(-1) * A^(-1)
+3. (BA)^T
+4. A^(-1) + B^(-1)
+
+ANSWER: 2
+EXPLANATION: The inverse of a product of invertible matrices is the product of their inverses in reverse order: (AB)^(-1) = B^(-1) * A^(-1).
+==END==
+
+==QUESTION==
+TOPIC: The Inverse of a Matrix
+TEXT: If A is an invertible matrix, what is (A^T)^(-1)?
+
+1. (A^(-1))^T
+2. A
+3. -A^T
+4. I
+
+ANSWER: 1
+EXPLANATION: The transpose of an inverse equals the inverse of the transpose: (A^T)^(-1) = (A^(-1))^T.
+==END==
+
+==QUESTION==
+TOPIC: Characterization of Invertible Matrices
+TEXT: According to the Invertible Matrix Theorem (IMT), an n x n matrix A is invertible if and only if:
+
+1. det(A) = 0
+2. A has fewer than n pivot positions
+3. Ax = 0 has only the trivial solution
+4. The columns of A are linearly dependent
+
+ANSWER: 3
+EXPLANATION: The IMT states that invertibility is equivalent to Ax = 0 having only the trivial solution (among other statements).
+==END==
+
+==QUESTION==
+TOPIC: Characterization of Invertible Matrices
+TEXT: Which of the following is equivalent to an n x n matrix A being invertible?
+
+1. The columns of A span R^n
+2. The rank of A is less than n
+3. Ax = b has no solution for some b
+4. det(A) = 0
+
+ANSWER: 1
+EXPLANATION: Under the IMT, an n x n matrix is invertible iff its columns span R^n.
+==END==
+
+==QUESTION==
+TOPIC: Characterization of Invertible Matrices
+TEXT: If A is an n x n invertible matrix, what can be said about its row reduced echelon form?
+
+1. It is a matrix of all zeros
+2. It is the n x n identity matrix I_n
+3. It has a row of zeros at the bottom
+4. It cannot be determined
+
+ANSWER: 2
+EXPLANATION: An n x n matrix is invertible if and only if it is row equivalent to the identity matrix I_n (n pivot positions).
+==END==
+
+==QUESTION==
+TOPIC: Characterization of Invertible Matrices
+TEXT: What is the preferred justification style on exams for matrix invertibility questions?
+
+1. A lengthy essay on vector transformations
+2. The most computationally minimal true statement (e.g., "A has n pivot positions")
+3. Calculating all eigenvalues explicitely
+4. Stating that the matrix looks symmetric
+
+ANSWER: 2
+EXPLANATION: Efficient justifications use the most computationally minimal true property from the IMT, such as stating pivot count or determinant value.
+==END==
+
+==QUESTION==
+TOPIC: Characterization of Invertible Matrices
+TEXT: If A is invertible, what is the solution to Ax = b?
+
+1. x = b / A
+2. x = A^(-1) * b
+3. x = b * A^(-1)
+4. No solution exists
+
+ANSWER: 2
+EXPLANATION: Multiplying both sides of Ax = b on the left by A^(-1) yields x = A^(-1)b.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: A subspace H of R^n must satisfy which three conditions?
+
+1. Contain 0 vector, closed under addition, closed under scalar multiplication
+2. Be square, invertible, symmetric
+3. Contain 1 vector, orthogonal, normalized
+4. Non-zero determinant, span R^n, independent
+
+ANSWER: 1
+EXPLANATION: The three defining axioms of a subspace are: contains zero vector, closed under addition, and closed under scalar multiplication.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: What is a basis for a subspace H?
+
+1. Any set of vectors that contains the zero vector
+2. A linearly independent set that spans H
+3. A set of orthogonal vectors of length 1
+4. The set of all solutions to Ax = b
+
+ANSWER: 2
+EXPLANATION: A basis for a subspace is defined as a linearly independent set that spans the subspace.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: The dimension of a non-zero subspace H is defined as:
+
+1. The total number of vectors in H
+2. The number of vectors in any basis for H
+3. The number of rows in H
+4. Always equal to n
+
+ANSWER: 2
+EXPLANATION: Dimension is the number of vectors contained in any basis for the subspace.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: The rank of a matrix A is equal to:
+
+1. dim(Nul A)
+2. dim(Col A), which is the number of pivot columns of A
+3. The total number of columns in A
+4. The determinant of A
+
+ANSWER: 2
+EXPLANATION: Rank(A) is defined as the dimension of the column space of A, which equals the number of pivot columns.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: Is a line in R^2 that does NOT pass through the origin a subspace of R^2?
+
+1. Yes, because it is a straight line
+2. No, because it does not contain the zero vector
+3. Yes, if its slope is positive
+4. Cannot be determined
+
+ANSWER: 2
+EXPLANATION: Every subspace must contain the zero vector (the origin). A line not passing through the origin fails this condition.
+==END==
+
+==QUESTION==
+TOPIC: Introduction to Determinants
+TEXT: What is the cofactor C_ij of entry a_ij in a matrix?
+
+1. M_ij
+2. (-1)^(i+j) * M_ij
+3. (-1)^(i-j) * M_ij
+4. det(A) / a_ij
+
+ANSWER: 2
+EXPLANATION: The cofactor C_ij is defined as (-1)^(i+j) times the minor M_ij (determinant of submatrix deleting row i and col j).
+==END==
+
+==QUESTION==
+TOPIC: Introduction to Determinants
+TEXT: When computing det(A) using cofactor expansion, which row or column should be chosen to minimize calculation?
+
+1. The first row always
+2. The row or column containing the most zeros
+3. The main diagonal
+4. The last column
+
+ANSWER: 2
+EXPLANATION: Expanding along a row or column with many zeros eliminates terms, significantly simplifying cofactor calculations.
+==END==
+
+==QUESTION==
+TOPIC: Introduction to Determinants
+TEXT: What is the determinant of a 2x2 matrix [[3, 2], [1, 4]]?
+
+1. 10
+2. 14
+3. 12
+4. 10
+
+ANSWER: 1
+EXPLANATION: det = (3*4) - (2*1) = 12 - 2 = 10.
+==END==
+
+==QUESTION==
+TOPIC: Introduction to Determinants
+TEXT: In the standard 3x3 sign pattern matrix for cofactor expansion, what is the sign associated with position (1, 2)?
+
+1. +
+2. -
+3. 0
+4. Depends on matrix values
+
+ANSWER: 2
+EXPLANATION: The formula is (-1)^(1+2) = (-1)^3 = -1, which corresponds to a minus sign in the checkerboard pattern.
+==END==
+
+==QUESTION==
+TOPIC: Introduction to Determinants
+TEXT: The determinant of a triangular matrix (upper or lower) is:
+
+1. Always equal to 1
+2. Always equal to 0
+3. The product of the entries on the main diagonal
+4. The sum of the diagonal entries
+
+ANSWER: 3
+EXPLANATION: For triangular matrices, cofactor expansion along rows/columns simplifies directly to the product of diagonal entries.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: How does swapping two rows of a matrix affect its determinant?
+
+1. The determinant remains unchanged
+2. The determinant is multiplied by -1
+3. The determinant is squared
+4. The determinant becomes zero
+
+ANSWER: 2
+EXPLANATION: Performing a single row swap reverses the sign of the determinant.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: If a row of an n x n matrix A is scaled by a scalar k, what happens to det(A)?
+
+1. It is multiplied by k
+2. It is multiplied by k^n
+3. It remains unchanged
+4. It is divided by k
+
+ANSWER: 1
+EXPLANATION: Scaling a single row by k scales the total determinant by k.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: If an entire n x n matrix A is multiplied by a scalar c, what is det(cA)?
 
 1. c * det(A)
-2. (c^n) * det(A)
-3. (n^c) * det(A)
-4. det(A) / c
+2. c^n * det(A)
+3. n * det(A)
+4. (1/c) * det(A)
 
 ANSWER: 2
-EXPLANATION: Scaling an entire n x n matrix by c scales each of its n rows by c. Therefore, c is factored out n times, yielding det(cA) = (c^n) * det(A).
+EXPLANATION: Factoring scalar c out of each of the n rows yields c^n * det(A).
 ==END==
 
 ==QUESTION==
-TOPIC: Determinants
-TEXT: When applying Cramer's Rule to solve Ax = b for x_i, how is the matrix A_i constructed?
+TOPIC: Properties of Determinants
+TEXT: How does a row replacement operation (R_i -> R_i + k*R_j) affect det(A)?
+
+1. Multiplies det(A) by k
+2. Flips the sign of det(A)
+3. Leaves det(A) unchanged
+4. Sets det(A) to 0
+
+ANSWER: 3
+EXPLANATION: Row replacements (adding a multiple of one row to another) do not alter the determinant.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: For square matrices A and B, which of the following is true?
+
+1. det(A+B) = det(A) + det(B)
+2. det(AB) = det(A) * det(B)
+3. det(AB) = det(A) / det(B)
+4. det(A - B) = det(A) - det(B)
+
+ANSWER: 2
+EXPLANATION: Determinants are multiplicative: det(AB) = det(A)det(B), but they are NOT additive.
+==END==
+
+==QUESTION==
+TOPIC: Cramer's Rule
+TEXT: In Cramer's Rule for solving Ax = b, how is the matrix A_i constructed?
 
 1. By replacing row i of A with b
 2. By replacing column i of A with b
-3. By removing column i from A
-4. By augmenting A with b as an additional column
+3. By adding b as an extra column
+4. By taking the transpose of A
 
 ANSWER: 2
-EXPLANATION: In Cramer's Rule, A_i is created by replacing column i of A with the constant vector b. Then x_i = det(A_i) / det(A).
+EXPLANATION: A_i is obtained by replacing column i of A with the column vector b.
 ==END==
 
 ==QUESTION==
-TOPIC: Vector Spaces
-TEXT: Which of the following conditions must be satisfied for a subset H of R^n to be a subspace? (Select TWO.)
+TOPIC: Cramer's Rule
+TEXT: What is the formula for the ith variable x_i in Cramer's Rule?
 
-1. H contains the zero vector
-2. H is closed under vector addition and scalar multiplication
-3. H contains strictly non-zero vectors
-4. The dimension of H is equal to n
+1. x_i = det(A) / det(A_i)
+2. x_i = det(A_i) / det(A)
+3. x_i = det(A_i) * det(A)
+4. x_i = det(A_i - A)
 
-ANSWER: 1,2
-EXPLANATION: A subspace H must meet three properties: (1) contain the zero vector, (2) be closed under addition (u + v in H for u, v in H), and (3) be closed under scalar multiplication (c*u in H).
+ANSWER: 2
+EXPLANATION: Cramer's Rule states x_i = det(A_i) / det(A), provided det(A) != 0.
 ==END==
 
 ==QUESTION==
-TOPIC: Vector Spaces
-TEXT: What is the dimension of the Null Space of an m x n matrix A with 3 pivot columns?
+TOPIC: Cramer's Rule
+TEXT: Cramer's Rule is applicable to solve Ax = b only when:
+
+1. A is square and invertible (det A != 0)
+2. A is rectangular
+3. b is the zero vector
+4. A has free variables
+
+ANSWER: 1
+EXPLANATION: Cramer's Rule requires dividing by det(A), so A must be square with det(A) != 0.
+==END==
+
+==QUESTION==
+TOPIC: Cramer's Rule
+TEXT: Why is Cramer's Rule rarely used for large computational linear systems?
+
+1. It gives inaccurate results
+2. It is computationally inefficient compared to row reduction
+3. It only works for 2x2 matrices
+4. It requires complex numbers
+
+ANSWER: 2
+EXPLANATION: Computing multiple determinants for large matrices requires far more floating-point operations than Gaussian elimination.
+==END==
+
+==QUESTION==
+TOPIC: Cramer's Rule
+TEXT: If det(A) = 4 and det(A_2) = -12 for a system Ax = b, what is x_2?
 
 1. 3
-2. m - 3
-3. n - 3
-4. m + n - 3
+2. -3
+3. -48
+4. -1/3
+
+ANSWER: 2
+EXPLANATION: x_2 = det(A_2) / det(A) = -12 / 4 = -3.
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces, Null Space, Column Space
+TEXT: How is the Null space of a matrix A, Nul A, defined?
+
+1. Set of all linear combinations of columns of A
+2. Set of all solutions to the homogeneous equation Ax = 0
+3. Set of all vectors b such that Ax = b is consistent
+4. The set of pivot columns of A
+
+ANSWER: 2
+EXPLANATION: Nul A = {x : Ax = 0}, which is the set of all solutions to the homogeneous system.
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces, Null Space, Column Space
+TEXT: The Column space of an m x n matrix A, Col A, is a subspace of:
+
+1. R^n
+2. R^m
+3. R^(m+n)
+4. R^(m*n)
+
+ANSWER: 2
+EXPLANATION: Columns of A are vectors in R^m, so their span (Col A) is a subspace of R^m.
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces, Null Space, Column Space
+TEXT: Nul A for an m x n matrix A is a subspace of:
+
+1. R^n
+2. R^m
+3. R^(m-n)
+4. R^1
+
+ANSWER: 1
+EXPLANATION: Solutions x to Ax = 0 are vectors with n components, so Nul A is a subspace of R^n.
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces, Null Space, Column Space
+TEXT: To find a basis for Col A, you should select:
+
+1. The pivot columns of the reduced row echelon form of A
+2. The pivot columns of the original matrix A
+3. All nonzero rows of RREF
+4. All columns of A
+
+ANSWER: 2
+EXPLANATION: A basis for Col A consists of the columns of the original matrix A that correspond to pivot positions.
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces, Null Space, Column Space
+TEXT: How do you find a basis for Nul A?
+
+1. Row reduce A to RREF and express solutions to Ax = 0 in parametric vector form
+2. Take the pivot columns of A
+3. Calculate det(A)
+4. Transpose matrix A
+
+ANSWER: 1
+EXPLANATION: Solving Ax = 0 in parametric vector form isolates the free variables; the vectors attached to these free variables form a basis for Nul A.
+==END==
+
+==QUESTION==
+TOPIC: Linearly Independent Sets; Bases
+TEXT: If a vector v_3 in a spanning set {v_1, v_2, v_3} is a linear combination of v_1 and v_2, removing v_3 from the set:
+
+1. Reduces the span of the set
+2. Does not change the span of the set
+3. Makes the set dependent
+4. Changes the vector space dimension
+
+ANSWER: 2
+EXPLANATION: The Spanning Set Theorem states that if a vector in a set is a linear combination of others, removing it leaves the span unchanged.
+==END==
+
+==QUESTION==
+TOPIC: Linearly Independent Sets; Bases
+TEXT: A set of vectors {v_1, ..., v_k} in a vector space V is a basis for V if:
+
+1. It is linearly independent and spans V
+2. It spans V only
+3. It is linearly independent only
+4. It contains the zero vector
+
+ANSWER: 1
+EXPLANATION: By definition, a basis must satisfy both conditions: linear independence AND spanning the space.
+==END==
+
+==QUESTION==
+TOPIC: Linearly Independent Sets; Bases
+TEXT: Can a set containing 4 vectors span a 3-dimensional vector space V?
+
+1. No, never
+2. Yes, provided at least 3 of them are linearly independent
+3. Yes, but only if they are orthogonal
+4. No, because 4 > 3
+
+ANSWER: 2
+EXPLANATION: A set of 4 vectors can span a 3D space if it contains a subset of 3 linearly independent vectors.
+==END==
+
+==QUESTION==
+TOPIC: Linearly Independent Sets; Bases
+TEXT: Can a set of 2 vectors span R^3?
+
+1. Yes
+2. No, because at least 3 vectors are required to span R^3
+3. Yes, if they are orthogonal
+4. Depends on the vector entries
+
+ANSWER: 2
+EXPLANATION: To span R^3, a set must contain at least 3 vectors (equal to the dimension of R^3).
+==END==
+
+==QUESTION==
+TOPIC: Linearly Independent Sets; Bases
+TEXT: If V = Span{v_1, v_2, v_3} and v_1 + 2*v_2 - v_3 = 0, what is dim(V)?
+
+1. 3
+2. At most 2
+3. Exactly 1
+4. 0
+
+ANSWER: 2
+EXPLANATION: The given linear dependency means v_3 = v_1 + 2*v_2. Removing v_3 leaves at most 2 independent vectors, so dim(V) <= 2.
+==END==
+
+==QUESTION==
+TOPIC: Coordinate Systems
+TEXT: If B = {b_1, ..., b_n} is a basis for V, then for each x in V, the coordinate vector [x]_B contains:
+
+1. The unique scalars c_1, ..., c_n such that x = c_1*b_1 + ... + c_n*b_n
+2. The dot products x . b_i
+3. The magnitudes of vectors b_i
+4. The eigenvalues of matrix B
+
+ANSWER: 1
+EXPLANATION: Coordinates [x]_B are the unique coefficients needed to write x as a linear combination of the basis vectors B.
+==END==
+
+==QUESTION==
+TOPIC: Coordinate Systems
+TEXT: To find the coordinate vector [x]_B relative to basis B = {b_1, b_2}, one sets up and solves which system?
+
+1. [b_1  b_2 | x]
+2. [x  b_1 | b_2]
+3. [b_1 + b_2 | x]
+4. [b_1 * b_2 | x]
+
+ANSWER: 1
+EXPLANATION: The vector equation c_1*b_1 + c_2*b_2 = x translates to the matrix equation [b_1 b_2][x]_B = x, solved via [b_1 b_2 | x].
+==END==
+
+==QUESTION==
+TOPIC: Coordinate Systems
+TEXT: If B is the standard basis {e_1, e_2} for R^2, what is [x]_B for x = [3, -5]^T?
+
+1. [3, -5]^T
+2. [-5, 3]^T
+3. [1, 1]^T
+4. [0, 0]^T
+
+ANSWER: 1
+EXPLANATION: Relative to the standard basis, coordinate vector [x]_B is identical to x itself.
+==END==
+
+==QUESTION==
+TOPIC: Coordinate Systems
+TEXT: The coordinate mapping x |-> [x]_B from a vector space V with basis B of n vectors onto R^n is a:
+
+1. Non-linear mapping
+2. One-to-one and onto linear transformation (isomorphism)
+3. Singular transformation
+4. Mapping that loses information
+
+ANSWER: 2
+EXPLANATION: Coordinate mapping provides a one-to-one linear correspondence (isomorphism) between V and R^n.
+==END==
+
+==QUESTION==
+TOPIC: Coordinate Systems
+TEXT: Given b_1 = [1, 0]^T, b_2 = [1, 2]^T and [x]_B = [2, 3]^T, what is vector x in standard coordinates?
+
+1. [5, 6]^T
+2. [2, 3]^T
+3. [3, 2]^T
+4. [5, 3]^T
+
+ANSWER: 1
+EXPLANATION: x = 2*b_1 + 3*b_2 = 2*[1, 0]^T + 3*[1, 2]^T = [2+3, 0+6]^T = [5, 6]^T.
+==END==
+
+==QUESTION==
+TOPIC: The Dimension of a Vector Space
+TEXT: How does dim(Row A) compare to dim(Col A) for any m x n matrix A?
+
+1. dim(Row A) is always greater
+2. dim(Col A) is always greater
+3. They are always equal to rank(A)
+4. They sum to n
 
 ANSWER: 3
-EXPLANATION: By the Rank-Nullity Theorem, dim(Nul A) + rank(A) = n. Since rank(A) is the number of pivot columns (3), dim(Nul A) = n - 3 (the number of free variables).
+EXPLANATION: A fundamental matrix theorem states that dim(Row A) = dim(Col A) = rank(A).
 ==END==
 
 ==QUESTION==
-TOPIC: Eigenvalues and Eigenvectors
-TEXT: How can you immediately determine the eigenvalues of a triangular or block triangular matrix?
+TOPIC: The Dimension of a Vector Space
+TEXT: What is the Rank-Nullity Theorem equation for an m x n matrix A?
 
-1. By calculating the trace of the matrix
-2. By reading the entries along the main diagonal
-3. By row reducing the matrix to RREF
-4. By computing the dot product of the first and last rows
+1. rank(A) + dim(Nul A) = n
+2. rank(A) + dim(Nul A) = m
+3. rank(A) - dim(Nul A) = n
+4. dim(Col A) + dim(Row A) = n
+
+ANSWER: 1
+EXPLANATION: Rank-Nullity states: rank(A) + dim(Nul A) = number of columns (n).
+==END==
+
+==QUESTION==
+TOPIC: The Dimension of a Vector Space
+TEXT: If A is a 5 x 7 matrix with rank(A) = 4, what is dim(Nul A)?
+
+1. 1
+2. 3
+3. 2
+4. 5
 
 ANSWER: 2
-EXPLANATION: For triangular and block-triangular matrices, the eigenvalues are simply the diagonal entries (or the combined eigenvalues of each diagonal block).
+EXPLANATION: By Rank-Nullity, dim(Nul A) = n - rank(A) = 7 - 4 = 3.
 ==END==
 
 ==QUESTION==
-TOPIC: Eigenvalues and Eigenvectors
-TEXT: An n x n matrix A is diagonalizable if and only if which condition holds?
+TOPIC: The Dimension of a Vector Space
+TEXT: If A is a 4 x 4 matrix and dim(Nul A) = 0, what is rank(A)?
 
-1. A has det(A) != 0
-2. A has n linearly independent eigenvectors
-3. A is symmetric and upper triangular
-4. A has no zero entries
-
-ANSWER: 2
-EXPLANATION: An n x n matrix A is diagonalizable (A = P D P^-1) if and only if A has n linearly independent eigenvectors, forming an eigenvector basis for R^n.
-==END==
-
-==QUESTION==
-TOPIC: Orthogonality and Least Squares
-TEXT: Given two non-zero vectors u and v, under what condition are u and v orthogonal?
-
-1. Their vector sum u + v equals zero
-2. Their inner product (dot product) u . v equals zero
-3. Their determinant equals 1
-4. They are scalar multiples of each other
-
-ANSWER: 2
-EXPLANATION: Two vectors u and v are orthogonal if and only if their dot product u . v = 0.
-==END==
-
-==QUESTION==
-TOPIC: Orthogonality and Least Squares
-TEXT: In the Gram-Schmidt process, given an initial set of vectors {x1, x2}, how is the second orthogonal vector v2 calculated?
-
-1. v2 = x2 - ( (x2 . x1) / (x1 . x1) ) * x1
-2. v2 = x2 + ( (x2 . v1) / (v1 . v1) ) * v1
-3. v2 = x2 - ( (x2 . v1) / (v1 . v1) ) * v1
-4. v2 = (x2 . v1) * x1
+1. 0
+2. 2
+3. 4
+4. 8
 
 ANSWER: 3
-EXPLANATION: Gram-Schmidt sets v1 = x1, and v2 = x2 - proj_v1(x2) = x2 - ( (x2 . v1) / (v1 . v1) ) * v1. The ratio is always (target vector . basis vector) / (basis vector . itself).
+EXPLANATION: rank(A) = n - dim(Nul A) = 4 - 0 = 4.
 ==END==
 
 ==QUESTION==
-TOPIC: Orthogonality and Least Squares
-TEXT: When a system Ax = b is inconsistent, what normal equation is solved to find the least-squares solution x_hat?
+TOPIC: The Dimension of a Vector Space
+TEXT: If a subspace H of R^5 has dimension 5, what is H?
 
-1. A * x_hat = b
-2. (A^T * A) * x_hat = A^T * b
-3. (A * A^T) * x_hat = b
-4. A^T * x_hat = A^T * b
+1. A line in R^5
+2. A plane in R^5
+3. All of R^5
+4. The zero subspace
+
+ANSWER: 3
+EXPLANATION: The only 5-dimensional subspace of R^5 is R^5 itself.
+==END==
+
+==QUESTION==
+TOPIC: Markov Chains
+TEXT: A square matrix P is a stochastic matrix if:
+
+1. Its entries are all negative
+2. Its entries are non-negative and each column sums to 1
+3. Its determinant is zero
+4. It is an identity matrix
 
 ANSWER: 2
-EXPLANATION: The least-squares solution x_hat minimizes ||Ax - b|| and is calculated by solving the normal equations: (A^T * A) * x_hat = A^T * b.
+EXPLANATION: By definition, a stochastic matrix has non-negative probability entries where each column sums to 1.
+==END==
+
+==QUESTION==
+TOPIC: Markov Chains
+TEXT: A steady-state vector q for a stochastic matrix P satisfies which equation?
+
+1. Pq = 0
+2. Pq = q
+3. Pq = -q
+4. det(P) = q
+
+ANSWER: 2
+EXPLANATION: A steady-state vector remains unchanged when multiplied by transition matrix P: Pq = q.
+==END==
+
+==QUESTION==
+TOPIC: Markov Chains
+TEXT: To find the steady-state vector q of a transition matrix P, one solves:
+
+1. (P - I)q = 0 subject to entries of q summing to 1
+2. (P + I)q = 0
+3. P^T * q = 0
+4. det(P - I) = 1
+
+ANSWER: 1
+EXPLANATION: Pq = q rearranges to (P - I)q = 0. Adding the condition sum(q_i) = 1 yields a unique probability vector.
+==END==
+
+==QUESTION==
+TOPIC: Markov Chains
+TEXT: In a stochastic matrix, state vector entries represent:
+
+1. Eigenvalues
+2. Probabilities (summing to 1)
+3. Coordinates in R^n
+4. Row operations
+
+ANSWER: 2
+EXPLANATION: State vectors hold population fractions or probabilities, which must be non-negative and sum to 1.
+==END==
+
+==QUESTION==
+TOPIC: Markov Chains
+TEXT: If P is a regular stochastic matrix, what happens to P^k * x_0 as k -> infinity for any initial probability vector x_0?
+
+1. It grows without bound
+2. It approaches the unique steady-state vector q
+3. It oscillates randomly
+4. It converges to the zero vector
+
+ANSWER: 2
+EXPLANATION: For regular stochastic matrices, Markov chains converge to the unique steady-state vector q regardless of initial state x_0.
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: A scalar lambda is an eigenvalue of an n x n matrix A if there exists a non-zero vector x such that:
+
+1. Ax = lambda * x
+2. Ax = lambda
+3. A + x = lambda
+4. det(A) = lambda
+
+ANSWER: 1
+EXPLANATION: An eigenvalue lambda and corresponding eigenvector x (non-zero) satisfy Ax = lambda*x.
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: For a triangular matrix, its eigenvalues are simply:
+
+1. The sum of each row
+2. The entries on its main diagonal
+3. The determinant divided by n
+4. Always 0 and 1
+
+ANSWER: 2
+EXPLANATION: For triangular (and diagonal) matrices, det(A - lambda*I) = 0 yields diagonal entries directly as roots.
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: A matrix A has an eigenvalue lambda = 0 if and only if A is:
+
+1. Invertible
+2. Not invertible (singular)
+3. Symmetric
+4. The identity matrix
+
+ANSWER: 2
+EXPLANATION: Ax = 0x = 0 has nontrivial solutions iff Nul A != {0}, which means A is non-invertible.
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: An eigenspace of A corresponding to eigenvalue lambda is defined as:
+
+1. Col(A)
+2. Nul(A - lambda*I)
+3. Row(A)
+4. Span of all eigenvectors
+
+ANSWER: 2
+EXPLANATION: Ax = lambda*x is equivalent to (A - lambda*I)x = 0, so the eigenspace is the null space Nul(A - lambda*I).
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: How do you check if a vector x is an eigenvector of matrix A?
+
+1. Calculate Ax and check if the result is a scalar multiple of x
+2. Check if x is in Col A
+3. Compute det(A)
+4. Check if x . x = 1
+
+ANSWER: 1
+EXPLANATION: If Ax = lambda*x for some scalar lambda, x is an eigenvector.
+==END==
+
+==QUESTION==
+TOPIC: The Characteristic Equation
+TEXT: The characteristic equation used to find the eigenvalues of a square matrix A is:
+
+1. det(A - lambda*I) = 0
+2. (A - lambda*I) = 0
+3. trace(A) = lambda
+4. Ax = 0
+
+ANSWER: 1
+EXPLANATION: Non-trivial solutions to (A - lambda*I)x = 0 exist iff det(A - lambda*I) = 0.
+==END==
+
+==QUESTION==
+TOPIC: The Characteristic Equation
+TEXT: For a 3x3 matrix A, expanding det(A - lambda*I) always yields a polynomial in lambda of degree:
+
+1. 2
+2. 3
+3. 1
+4. 9
+
+ANSWER: 2
+EXPLANATION: The characteristic polynomial of an n x n matrix always has degree n (degree 3 for a 3x3).
+==END==
+
+==QUESTION==
+TOPIC: The Characteristic Equation
+TEXT: The algebraic multiplicity of an eigenvalue is:
+
+1. The dimension of its eigenspace
+2. The number of times it appears as a root of the characteristic polynomial
+3. The rank of matrix A
+4. The number of non-zero entries in its eigenvector
+
+ANSWER: 2
+EXPLANATION: Algebraic multiplicity is defined as the multiplicity of the eigenvalue as a root of det(A - lambda*I) = 0.
+==END==
+
+==QUESTION==
+TOPIC: The Characteristic Equation
+TEXT: What tool must be used to find det(A - lambda*I) for a general matrix, since row operations alter lambda terms?
+
+1. Row reduction to RREF
+2. Cofactor expansion
+3. Gram-Schmidt process
+4. Inverse matrix multiplication
+
+ANSWER: 2
+EXPLANATION: Row operations with variable lambda are error-prone; cofactor expansion is required to reliably compute the characteristic polynomial.
+==END==
+
+==QUESTION==
+TOPIC: The Characteristic Equation
+TEXT: If the characteristic polynomial of A is (lambda - 2)^2 * (lambda + 5) = 0, what are the eigenvalues and their algebraic multiplicities?
+
+1. lambda = 2 (mult 2), lambda = -5 (mult 1)
+2. lambda = -2 (mult 2), lambda = 5 (mult 1)
+3. lambda = 2 (mult 1), lambda = -5 (mult 2)
+4. lambda = 0 (mult 3)
+
+ANSWER: 1
+EXPLANATION: Roots are lambda = 2 with exponent 2 (multiplicity 2) and lambda = -5 with exponent 1 (multiplicity 1).
+==END==
+
+==QUESTION==
+TOPIC: Diagonalization
+TEXT: An n x n matrix A is diagonalizable if and only if A has:
+
+1. n pivot positions
+2. n linearly independent eigenvectors
+3. Nonzero determinant
+4. Complex eigenvalues
+
+ANSWER: 2
+EXPLANATION: The Diagonalization Theorem states A = PDP^(-1) exists iff A has n linearly independent eigenvectors.
+==END==
+
+==QUESTION==
+TOPIC: Diagonalization
+TEXT: In the factorization A = P D P^(-1), the columns of matrix P are:
+
+1. The rows of A
+2. Linearly independent eigenvectors of A
+3. The standard basis vectors
+4. The orthonormal basis of Col A
+
+ANSWER: 2
+EXPLANATION: P is constructed using n linearly independent eigenvectors of A as its columns.
+==END==
+
+==QUESTION==
+TOPIC: Diagonalization
+TEXT: In the factorization A = P D P^(-1), the diagonal entries of D are:
+
+1. All ones
+2. Eigenvalues of A corresponding to the column eigenvectors in P
+3. The determinants of submatrices
+4. The pivots of A
+
+ANSWER: 2
+EXPLANATION: D is a diagonal matrix containing the eigenvalues of A in order matching the eigenvectors in P.
+==END==
+
+==QUESTION==
+TOPIC: Diagonalization
+TEXT: If an n x n matrix A has n distinct eigenvalues, is A diagonalizable?
+
+1. Always yes
+2. Never
+3. Only if det(A) > 0
+4. Only if A is symmetric
+
+ANSWER: 1
+EXPLANATION: Eigenvectors corresponding to distinct eigenvalues are automatically linearly independent, guaranteeing n independent eigenvectors.
+==END==
+
+==QUESTION==
+TOPIC: Diagonalization
+TEXT: If A = P D P^(-1), what is A^k for any positive integer k?
+
+1. P * D^k * P^(-1)
+2. P^k * D * P^(-k)
+3. (P D P^(-1))^k without simplification
+4. k * P * D * P^(-1)
+
+ANSWER: 1
+EXPLANATION: A^k = (PDP^(-1))(PDP^(-1))...(PDP^(-1)) = P D^k P^(-1) because interior P^(-1)P terms collapse to I.
+==END==
+
+==QUESTION==
+TOPIC: Complex Eigenvalues
+TEXT: If a real matrix A has a complex eigenvalue lambda = a + bi (with b != 0), its conjugate pair is:
+
+1. a - bi
+2. -a + bi
+3. -a - bi
+4. b + ai
+
+ANSWER: 1
+EXPLANATION: Complex roots of real polynomials always occur in conjugate pairs: a + bi and a - bi.
+==END==
+
+==QUESTION==
+TOPIC: Complex Eigenvalues
+TEXT: If x is a complex eigenvector corresponding to lambda = a + bi for real matrix A, what is the eigenvector for a - bi?
+
+1. x (same vector)
+2. x_bar (the complex conjugate of x)
+3. -x
+4. 1 / x
+
+ANSWER: 2
+EXPLANATION: For real matrices, taking the complex conjugate of Ax = lambda*x gives A(x_bar) = (lambda_bar)(x_bar).
+==END==
+
+==QUESTION==
+TOPIC: Complex Eigenvalues
+TEXT: Geometrically, a real 2x2 matrix with complex eigenvalues lambda = a +/- bi acts as:
+
+1. A pure reflection
+2. A rotation combined with a scaling
+3. A projection onto a line
+4. A shear parallel to x-axis
+
+ANSWER: 2
+EXPLANATION: Complex eigenvalues represent a transformation involving rotation by angle theta = arg(a+bi) and scaling by magnitude r = |a+bi|.
+==END==
+
+==QUESTION==
+TOPIC: Complex Eigenvalues
+TEXT: What is the absolute value (magnitude) r of complex eigenvalue lambda = 3 + 4i?
+
+1. 7
+2. 5
+3. 25
+4. 12
+
+ANSWER: 2
+EXPLANATION: r = sqrt(a^2 + b^2) = sqrt(3^2 + 4^2) = sqrt(9 + 16) = sqrt(25) = 5.
+==END==
+
+==QUESTION==
+TOPIC: Complex Eigenvalues
+TEXT: Can a 3x3 real matrix have 3 purely imaginary eigenvalues?
+
+1. Yes
+2. No, because complex roots must occur in conjugate pairs (even count)
+3. Yes, if det(A) = 0
+4. Always
+
+ANSWER: 2
+EXPLANATION: Non-real complex roots come in pairs. A 3x3 polynomial has 3 roots, so at least one root must be real.
+==END==
+
+==QUESTION==
+TOPIC: Inner Product, Length, and Orthogonality
+TEXT: The inner product (dot product) of vectors u = [u_1, u_2]^T and v = [v_1, v_2]^T is:
+
+1. u_1*v_1 + u_2*v_2
+2. u_1*v_2 + u_2*v_1
+3. u_1*u_2 + v_1*v_2
+4. [u_1*v_1, u_2*v_2]^T
+
+ANSWER: 1
+EXPLANATION: Dot product u . v = u^T * v = u_1*v_1 + u_2*v_2 + ... + u_n*v_n.
+==END==
+
+==QUESTION==
+TOPIC: Inner Product, Length, and Orthogonality
+TEXT: The length (norm) of a vector v is defined as ||v|| =
+
+1. v . v
+2. sqrt(v . v)
+3. v^2
+4. 1 / (v . v)
+
+ANSWER: 2
+EXPLANATION: Length ||v|| is defined as the square root of the inner product of v with itself: sqrt(v . v).
+==END==
+
+==QUESTION==
+TOPIC: Inner Product, Length, and Orthogonality
+TEXT: Two vectors u and v are orthogonal if and only if:
+
+1. u . v = 1
+2. u . v = 0
+3. ||u|| = ||v||
+4. u = v
+
+ANSWER: 2
+EXPLANATION: Orthogonality is defined by a zero inner product: u . v = 0.
+==END==
+
+==QUESTION==
+TOPIC: Inner Product, Length, and Orthogonality
+TEXT: What is the distance between two vectors u and v in R^n?
+
+1. ||u + v||
+2. ||u - v||
+3. u . v
+4. ||u|| - ||v||
+
+ANSWER: 2
+EXPLANATION: Distance dist(u, v) is defined as the length of the difference vector ||u - v||.
+==END==
+
+==QUESTION==
+TOPIC: Inner Product, Length, and Orthogonality
+TEXT: If u = [3, 4]^T, what is the norm ||u||?
+
+1. 7
+2. 5
+3. 25
+4. 1
+
+ANSWER: 2
+EXPLANATION: ||u|| = sqrt(3^2 + 4^2) = sqrt(9 + 16) = sqrt(25) = 5.
+==END==
+
+==QUESTION==
+TOPIC: Orthogonal Sets and Projections
+TEXT: A set of vectors {u_1, ..., u_p} is an orthogonal set if:
+
+1. u_i . u_j = 0 for all i != j
+2. u_i . u_j = 1 for all i, j
+3. All vectors have length 1
+4. The vectors span R^n
+
+ANSWER: 1
+EXPLANATION: An orthogonal set requires every pair of distinct vectors in the set to be mutually perpendicular (u_i . u_j = 0 for i != j).
+==END==
+
+==QUESTION==
+TOPIC: Orthogonal Sets and Projections
+TEXT: The orthogonal projection of vector y onto a line through vector u is given by proj_u(y) =
+
+1. (y . u) / (u . u) * u
+2. (y . u) * u
+3. (u . u) / (y . u) * y
+4. y - u
+
+ANSWER: 1
+EXPLANATION: Formula for orthogonal projection of y onto line span{u} is proj_u(y) = [(y . u) / (u . u)] * u.
+==END==
+
+==QUESTION==
+TOPIC: Orthogonal Sets and Projections
+TEXT: If vector y is already orthogonal to vector u (y . u = 0), what is proj_u(y)?
+
+1. u
+2. y
+3. The zero vector 0
+4. -y
+
+ANSWER: 3
+EXPLANATION: If y . u = 0, proj_u(y) = [0 / (u . u)] * u = 0.
+==END==
+
+==QUESTION==
+TOPIC: Orthogonal Sets and Projections
+TEXT: An orthonormal set is an orthogonal set of vectors in which every vector has norm equal to:
+
+1. 0
+2. 1
+3. 2
+4. Infinity
+
+ANSWER: 2
+EXPLANATION: Orthonormal means orthogonal + normalized (unit length, ||u_i|| = 1).
+==END==
+
+==QUESTION==
+TOPIC: Orthogonal Sets and Projections
+TEXT: If {u_1, ..., u_p} is an orthogonal basis for subspace W, the projection y_hat of y onto W is:
+
+1. sum_i [ (y . u_i)/(u_i . u_i) * u_i ]
+2. sum_i [ (y . u_i) * u_i ]
+3. y - u_1
+4. (y . u_1) * u_p
+
+ANSWER: 1
+EXPLANATION: Orthogonal decomposition projects y independently onto each orthogonal basis vector of W and sums the components.
+==END==
+
+==QUESTION==
+TOPIC: The Gram-Schmidt Process
+TEXT: What is the main purpose of the Gram-Schmidt process?
+
+1. To compute the determinant of a matrix
+2. To build an orthogonal (or orthonormal) basis for a subspace from any given basis
+3. To find eigenvalues
+4. To solve non-linear systems
+
+ANSWER: 2
+EXPLANATION: Gram-Schmidt takes a linearly independent set and constructs an orthogonal basis that spans the exact same subspace.
+==END==
+
+==QUESTION==
+TOPIC: The Gram-Schmidt Process
+TEXT: Given a basis {x_1, x_2}, what is the first vector v_1 in the Gram-Schmidt orthogonal basis?
+
+1. v_1 = x_1
+2. v_1 = x_2
+3. v_1 = x_1 + x_2
+4. v_1 = 0
+
+ANSWER: 1
+EXPLANATION: Step 1 of Gram-Schmidt always sets the first orthogonal vector v_1 equal to the first original vector x_1.
+==END==
+
+==QUESTION==
+TOPIC: The Gram-Schmidt Process
+TEXT: Given v_1 = x_1, what is the formula for v_2 in Gram-Schmidt for basis {x_1, x_2}?
+
+1. v_2 = x_2 - [ (x_2 . v_1) / (v_1 . v_1) ] * v_1
+2. v_2 = x_2 + v_1
+3. v_2 = [ (x_2 . v_1) / (x_2 . x_2) ] * x_2
+4. v_2 = x_1 - x_2
+
+ANSWER: 1
+EXPLANATION: v_2 is calculated by subtracting from x_2 its orthogonal projection onto v_1: v_2 = x_2 - proj_v1(x_2).
+==END==
+
+==QUESTION==
+TOPIC: The Gram-Schmidt Process
+TEXT: How can you instantly verify if your Gram-Schmidt vectors v_1, v_2, v_3 are correct?
+
+1. Compute dot products v_1 . v_2, v_1 . v_3, v_2 . v_3 and check if they all equal 0
+2. Sum the vectors
+3. Check if det = 1
+4. Verify all entries are positive
+
+ANSWER: 1
+EXPLANATION: An orthogonal basis must have mutually zero dot products; computing v_i . v_j = 0 catches arithmetic mistakes.
+==END==
+
+==QUESTION==
+TOPIC: The Gram-Schmidt Process
+TEXT: Does changing the order of input vectors in Gram-Schmidt change the resulting orthogonal basis vectors?
+
+1. No, the vectors remain identical
+2. Yes, order produces different orthogonal vectors, though they span the same subspace
+3. It makes the vectors linearly dependent
+4. It fails to produce an orthogonal set
+
+ANSWER: 2
+EXPLANATION: Changing vector order changes the direction of intermediate projections, yielding different orthogonal vectors for the same span.
+==END==
+
+==QUESTION==
+TOPIC: Least-Squares Problems
+TEXT: When a system Ax = b is inconsistent, a least-squares solution x_hat minimizes which quantity?
+
+1. ||Ax - b||
+2. Ax - b
+3. det(A)
+4. x . b
+
+ANSWER: 1
+EXPLANATION: A least-squares solution x_hat minimizes the distance (norm of residual) ||Ax - b||.
+==END==
+
+==QUESTION==
+TOPIC: Least-Squares Problems
+TEXT: What set of equations must be solved to find the least-squares solution x_hat to Ax = b?
+
+1. Ax = b
+2. (A^T * A) * x_hat = A^T * b  (Normal Equations)
+3. A^T * x_hat = b
+4. (A * A^T) * x_hat = b
+
+ANSWER: 2
+EXPLANATION: The normal equations (A^T * A)x_hat = A^T * b project b onto Col A to solve for x_hat.
+==END==
+
+==QUESTION==
+TOPIC: Least-Squares Problems
+TEXT: If A^T * A is invertible, what is the unique least-squares solution x_hat?
+
+1. x_hat = (A^T * A)^(-1) * A^T * b
+2. x_hat = A^(-1) * b
+3. x_hat = (A * A^T)^(-1) * b
+4. x_hat = A^T * b
+
+ANSWER: 1
+EXPLANATION: Multiplying normal equations on the left by (A^T * A)^(-1) gives x_hat = (A^T * A)^(-1) A^T b.
+==END==
+
+==QUESTION==
+TOPIC: Least-Squares Problems
+TEXT: The least-squares error associated with least-squares solution x_hat is given by:
+
+1. ||Ax_hat - b||
+2. Ax_hat + b
+3. x_hat . b
+4. det(A^T * A)
+
+ANSWER: 1
+EXPLANATION: The error is the norm of the residual vector between the projection Ax_hat and target b: ||Ax_hat - b||.
+==END==
+
+==QUESTION==
+TOPIC: Least-Squares Problems
+TEXT: A^T * A is invertible if and only if the columns of matrix A are:
+
+1. Linearly dependent
+2. Linearly independent
+3. Orthogonal
+4. Square
+
+ANSWER: 2
+EXPLANATION: A^T * A is invertible iff Ax = 0 has only the trivial solution, which means A's columns are linearly independent.
+==END==
+
+==QUESTION==
+TOPIC: Common Traps Review
+TEXT: When identifying pivot columns for Col A, if you use columns from the REDUCED matrix instead of the ORIGINAL matrix A, you commit Trap #1. What is the fix?
+
+1. Always select pivot columns from the original matrix A
+2. Use the RREF matrix columns
+3. Transpose the matrix first
+4. Use the last augmented column
+
+ANSWER: 1
+EXPLANATION: Pivot positions are located via RREF, but the actual basis vectors for Col A must be taken from original matrix A.
+==END==
+
+==QUESTION==
+TOPIC: Common Traps Review
+TEXT: Trap #6 warns against declaring a homogeneous system Ax = 0 "inconsistent". Why is this a trap?
+
+1. Ax = 0 is ALWAYS consistent because x = 0 is always a solution
+2. Homogeneous systems have no solutions
+3. Ax = 0 only has solutions if det A = 0
+4. Ax = 0 is inconsistent if A is 3x3
+
+ANSWER: 1
+EXPLANATION: x = 0 always satisfies Ax = 0 (trivial solution). Homogeneous systems can never be inconsistent.
+==END==
+
+==QUESTION==
+TOPIC: Common Traps Review
+TEXT: Trap #7 emphasizes the distinction between kI - A and (kI)A. What is (kI)A?
+
+1. Matrix subtraction
+2. Scalar multiplication kA
+3. Matrix division
+4. Determinant expansion
+
+ANSWER: 2
+EXPLANATION: (kI)A = k(IA) = kA, which is scalar multiplication of A by k.
+==END==
+
+==QUESTION==
+TOPIC: Common Traps Review
+TEXT: Trap #4 warns about flipping ratios in Gram-Schmidt projections. What is the correct scalar ratio multiplying basis vector v_1?
+
+1. (v_1 . v_1) / (x_2 . v_1)
+2. (x_2 . v_1) / (v_1 . v_1)
+3. (x_2 . x_2) / (v_1 . v_1)
+4. (x_2 . v_1) / (x_2 . x_2)
+
+ANSWER: 2
+EXPLANATION: The ratio is always (target vector . basis vector) divided by (basis vector . itself).
+==END==
+
+==QUESTION==
+TOPIC: Common Traps Review
+TEXT: Trap #3 highlights a common error when expanding a 3x3 characteristic polynomial det(A - lambda*I) = 0. What must appear?
+
+1. A lambda^3 term
+2. Only a lambda^2 term
+3. No lambda terms
+4. A 1/lambda term
+
+ANSWER: 1
+EXPLANATION: Every 3x3 characteristic polynomial is cubic and MUST contain a lambda^3 term.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: In a linear equation a_1*x_1 + a_2*x_2 + ... + a_n*x_n = b, the coefficients a_1, ..., a_n are typically:
+
+1. Real or complex numbers
+2. Vectors
+3. Matrices
+4. Functions of x
+
+ANSWER: 1
+EXPLANATION: In standard linear algebra over R or C, coefficients a_i and constant b are scalars (real or complex numbers).
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: Two linear systems are called equivalent if they have:
+
+1. The exact same solution set
+2. The same number of variables
+3. The same coefficient matrix
+4. Zero determinants
+
+ANSWER: 1
+EXPLANATION: Equivalent linear systems are defined as systems possessing identical solution sets.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: Which of the following is NOT an elementary row operation?
+
+1. Replacement (add a multiple of one row to another)
+2. Interchange (swap two rows)
+3. Scaling (multiply a row by a non-zero scalar)
+4. Squaring (replace each entry in a row with its square)
+
+ANSWER: 4
+EXPLANATION: Squaring entries is a non-linear operation and is not an elementary row operation.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: Elementary row operations are reversible.
+
+1. True
+2. False
+3. Only row swaps are reversible
+4. Only row scalings are reversible
+
+ANSWER: 1
+EXPLANATION: Every elementary row operation can be undone by another elementary row operation of the same type.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: Is the reduced row echelon form (RREF) of a matrix unique?
+
+1. Yes, every matrix is row equivalent to a unique RREF matrix
+2. No, a matrix can have multiple RREFs
+3. Only for square matrices
+4. Only if det(A) != 0
+
+ANSWER: 1
+EXPLANATION: While echelon form is not unique, the REDUCED row echelon form (RREF) of any matrix is unique.
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: Vectors in R^n are ordered lists of n real numbers written as:
+
+1. Column matrices (n x 1)
+2. Row matrices (1 x 1)
+3. Determinants
+4. Scalars
+
+ANSWER: 1
+EXPLANATION: In linear algebra, vectors in R^n are conventionally represented as n x 1 column matrices.
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: For vectors u, v in R^n and scalar c, the operation c(u + v) equals:
+
+1. cu + cv
+2. cu + v
+3. u + cv
+4. c + u + v
+
+ANSWER: 1
+EXPLANATION: Scalar multiplication distributes over vector addition: c(u + v) = cu + cv.
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: Do vectors v_1 = [1, 0]^T and v_2 = [0, 1]^T span R^2?
+
+1. Yes
+2. No
+3. Only if scaled
+4. Cannot be determined
+
+ANSWER: 1
+EXPLANATION: Any vector [a, b]^T in R^2 can be written as a*v_1 + b*v_2, so they span R^2.
+==END==
+
+==QUESTION==
+TOPIC: The Matrix Equation Ax = b
+TEXT: If A is an m x n matrix with columns a_1, ..., a_n, and x is [x_1, ..., x_n]^T, then Ax equals:
+
+1. x_1*a_1 + x_2*a_2 + ... + x_n*a_n
+2. a_1 + a_2 + ... + a_n
+3. x_1 + x_2 + ... + x_n
+4. a_1*a_2*...*a_n
+
+ANSWER: 1
+EXPLANATION: By definition, Ax is the linear combination of A's columns using x's entries as weights.
+==END==
+
+==QUESTION==
+TOPIC: The Matrix Equation Ax = b
+TEXT: For an m x n matrix A, the linear mapping x |-> Ax transforms vectors from:
+
+1. R^n into R^m
+2. R^m into R^n
+3. R^n into R^n
+4. R^m into R^m
+
+ANSWER: 1
+EXPLANATION: Vector x has n components (in R^n) and Ax produces a vector with m components (in R^m).
+==END==
+
+==QUESTION==
+TOPIC: Solution Sets of Linear Systems
+TEXT: If Ax = b is consistent and x_p is a particular solution, any solution x can be written as:
+
+1. x = x_p + v_h, where Av_h = 0
+2. x = x_p * v_h
+3. x = x_p - b
+4. x = Av_h
+
+ANSWER: 1
+EXPLANATION: The general solution to Ax = b is x = x_p + v_h, where v_h is a solution to the homogeneous equation Ax = 0.
+==END==
+
+==QUESTION==
+TOPIC: Solution Sets of Linear Systems
+TEXT: If Ax = 0 has only the trivial solution, what can be said about free variables?
+
+1. There are no free variables
+2. There is at least one free variable
+3. All variables are free
+4. Number of free variables equals n
+
+ANSWER: 1
+EXPLANATION: Ax = 0 has only the trivial solution iff every variable column has a pivot, meaning zero free variables.
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: If a set of vectors contains more vectors than the dimension of the space (p > n), the set is:
+
+1. Linearly dependent
+2. Linearly independent
+3. A basis
+4. Orthogonal
+
+ANSWER: 1
+EXPLANATION: By Theorem 8 (Chapter 1), if p > n in R^n, the set {v_1, ..., v_p} is linearly dependent.
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: Is the set {[1, 2]^T, [2, 4]^T} linearly independent?
+
+1. No, because [2, 4]^T = 2 * [1, 2]^T
+2. Yes, because they are non-zero
+3. Yes, because they span R^2
+4. Cannot be determined
+
+ANSWER: 1
+EXPLANATION: Two vectors are linearly dependent if one is a scalar multiple of the other ([2,4]^T = 2*[1,2]^T).
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: If T: R^2 -> R^2 rotates vectors by 90 degrees counterclockwise, what is T([1, 0]^T)?
+
+1. [0, 1]^T
+2. [1, 0]^T
+3. [0, -1]^T
+4. [-1, 0]^T
+
+ANSWER: 1
+EXPLANATION: Rotating standard basis vector e_1 = [1, 0]^T counterclockwise by 90 degrees gives [0, 1]^T = e_2.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: If T(x) = Ax, the range of T is equal to:
+
+1. Column space of A (Col A)
+2. Null space of A (Nul A)
+3. Row space of A
+4. R^n
+
+ANSWER: 1
+EXPLANATION: The range of T(x) = Ax is the set of all vectors of the form Ax, which is Col A.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: If A is a 3 x 3 matrix and I_3 is the 3 x 3 identity matrix, then A * I_3 equals:
+
+1. A
+2. I_3
+3. 0
+4. 3A
+
+ANSWER: 1
+EXPLANATION: Multiplying any matrix by the identity matrix of compatible size leaves the matrix unchanged: AI = A.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: For matrix transpose, (A + B)^T =
+
+1. A^T + B^T
+2. A^T * B^T
+3. B^T + A
+4. (AB)^T
+
+ANSWER: 1
+EXPLANATION: Transposition distributes directly over matrix addition: (A + B)^T = A^T + B^T.
+==END==
+
+==QUESTION==
+TOPIC: The Inverse of a Matrix
+TEXT: If A is an invertible matrix, det(A^(-1)) equals:
+
+1. 1 / det(A)
+2. det(A)
+3. -det(A)
+4. 0
+
+ANSWER: 1
+EXPLANATION: Since det(A * A^(-1)) = det(I) = 1, det(A^(-1)) = 1 / det(A).
+==END==
+
+==QUESTION==
+TOPIC: Characterization of Invertible Matrices
+TEXT: If A is a 3 x 3 matrix with det(A) = 5, how many solutions does Ax = b have for any b in R^3?
+
+1. Exactly one solution
+2. Infinitely many solutions
+3. No solution
+4. Zero or infinitely many
+
+ANSWER: 1
+EXPLANATION: det(A) != 0 implies A is invertible; hence Ax = b has the unique solution x = A^(-1)b.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: Is the set consisting of only the zero vector {0} in R^n a subspace of R^n?
+
+1. Yes, it is the zero subspace of dimension 0
+2. No, because it lacks nonzero vectors
+3. Yes, of dimension 1
+4. No, because it is empty
+
+ANSWER: 1
+EXPLANATION: The set {0} contains 0, 0+0=0, c*0=0, satisfying all subspace axioms; its dimension is 0.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: If two rows of a square matrix A are identical, what is det(A)?
+
+1. 0
+2. 1
+3. -1
+4. Undefined
+
+ANSWER: 1
+EXPLANATION: Swapping the two identical rows gives det(A) = -det(A), which implies 2*det(A) = 0, so det(A) = 0.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: What is det(A^T) for any square matrix A?
+
+1. det(A)
+2. -det(A)
+3. 1 / det(A)
+4. (det A)^2
+
+ANSWER: 1
+EXPLANATION: A fundamental property of determinants is that det(A^T) = det(A).
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces
+TEXT: In a general vector space V, vector addition must be commutative (u + v = v + u).
+
+1. True
+2. False
+3. Only in R^n
+4. Only for unit vectors
+
+ANSWER: 1
+EXPLANATION: Commutativity of vector addition is one of the foundational axioms of any vector space.
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces, Null Space, Column Space
+TEXT: If A is a 4 x 6 matrix, Nul A is a subspace of R^k, where k =
+
+1. 6
+2. 4
+3. 2
+4. 10
+
+ANSWER: 1
+EXPLANATION: For an m x n matrix, Nul A is a subspace of R^n (where n = 6).
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces, Null Space, Column Space
+TEXT: If A is a 4 x 6 matrix, Col A is a subspace of R^k, where k =
+
+1. 4
+2. 6
+3. 2
+4. 24
+
+ANSWER: 1
+EXPLANATION: For an m x n matrix, Col A is a subspace of R^m (where m = 4).
+==END==
+
+==QUESTION==
+TOPIC: The Dimension of a Vector Space
+TEXT: If a vector space V has a basis of 4 vectors, any set of 5 vectors in V must be:
+
+1. Linearly dependent
+2. Linearly independent
+3. A basis for V
+4. Orthogonal
+
+ANSWER: 1
+EXPLANATION: If dim(V) = 4, any set containing more than 4 vectors in V is automatically linearly dependent.
+==END==
+
+==QUESTION==
+TOPIC: The Dimension of a Vector Space
+TEXT: If a vector space V has dim(V) = p, any linearly independent set of p vectors in V is:
+
+1. Automatically a basis for V
+2. Not a basis
+3. Dependent
+4. Orthogonal
+
+ANSWER: 1
+EXPLANATION: By the Basis Theorem, if dim(V) = p, any independent set of exactly p vectors automatically spans V and forms a basis.
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: If x is an eigenvector of A corresponding to lambda, is 3x also an eigenvector of A corresponding to lambda?
+
+1. Yes (for non-zero 3x)
+2. No
+3. Only if lambda = 3
+4. Only if A is diagonal
+
+ANSWER: 1
+EXPLANATION: A(3x) = 3(Ax) = 3(lambda*x) = lambda(3x), so any non-zero scalar multiple of an eigenvector is also an eigenvector.
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: What are the eigenvalues of a 2x2 diagonal matrix D = [[4, 0], [0, -7]]?
+
+1. 4 and -7
+2. 0 and 0
+3. 11 and -3
+4. -28 and 1
+
+ANSWER: 1
+EXPLANATION: For diagonal matrices, the diagonal entries are precisely the eigenvalues.
+==END==
+
+==QUESTION==
+TOPIC: The Characteristic Equation
+TEXT: The trace of a square matrix A is defined as:
+
+1. The sum of the entries on its main diagonal
+2. The product of its diagonal entries
+3. The determinant of A
+4. The rank of A
+
+ANSWER: 1
+EXPLANATION: Trace(A) is the sum of the main diagonal entries of A (which also equals the sum of its eigenvalues).
+==END==
+
+==QUESTION==
+TOPIC: Diagonalization
+TEXT: If A is diagonalizable with A = PDP^(-1), what is det(A) in terms of D?
+
+1. det(D) (product of eigenvalues)
+2. det(P)
+3. 0
+4. det(P) + det(D)
+
+ANSWER: 1
+EXPLANATION: det(A) = det(PDP^(-1)) = det(P)det(D)det(P^(-1)) = det(D), which is the product of the eigenvalues.
+==END==
+
+==QUESTION==
+TOPIC: Inner Product, Length, and Orthogonality
+TEXT: For any vector v in R^n, ||v|| >= 0, and ||v|| = 0 if and only if:
+
+1. v is the zero vector
+2. v has all negative entries
+3. v is a unit vector
+4. v is orthogonal to itself
+
+ANSWER: 1
+EXPLANATION: Norm is non-negative and equals zero solely for the zero vector.
+==END==
+
+==QUESTION==
+TOPIC: Inner Product, Length, and Orthogonality
+TEXT: A unit vector is a vector whose norm (length) is equal to:
+
+1. 1
+2. 0
+3. -1
+4. Infinity
+
+ANSWER: 1
+EXPLANATION: By definition, a unit vector u satisfies ||u|| = 1.
+==END==
+
+==QUESTION==
+TOPIC: Orthogonal Sets and Projections
+TEXT: If u and v are orthogonal vectors in R^n, the Pythagorean Theorem states:
+
+1. ||u + v||^2 = ||u||^2 + ||v||^2
+2. ||u + v|| = ||u|| + ||v||
+3. u . v = ||u|| * ||v||
+4. ||u - v|| = 0
+
+ANSWER: 1
+EXPLANATION: Two vectors u, v are orthogonal iff ||u + v||^2 = ||u||^2 + ||v||^2.
+==END==
+
+==QUESTION==
+TOPIC: The Gram-Schmidt Process
+TEXT: In Gram-Schmidt, after computing orthogonal vectors v_1, v_2, ..., v_p, how do you convert them to an ORTHONORMAL basis?
+
+1. Normalize each vector by dividing by its norm (q_i = v_i / ||v_i||)
+2. Multiply each vector by 2
+3. Add the vectors together
+4. Take the transpose of each vector
+
+ANSWER: 1
+EXPLANATION: Dividing each orthogonal vector by its own length yields unit length vectors, forming an orthonormal basis.
+==END==
+
+==QUESTION==
+TOPIC: Least-Squares Problems
+TEXT: If Ax = b is consistent, what is the least-squares error ||Ax_hat - b||?
+
+1. 0
+2. 1
+3. det(A)
+4. ||b||
+
+ANSWER: 1
+EXPLANATION: If Ax = b is consistent, an exact solution exists where Ax_hat = b, making error ||b - b|| = 0.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: Which of the following equations is NOT linear?
+
+1. 3*x_1 - 4*x_2 + x_3 = 5
+2. x_1 + x_2*x_3 = 2
+3. x_1 = 0
+4. -x_1 + 2*x_2 = 11
+
+ANSWER: 2
+EXPLANATION: The term x_2*x_3 is a product of two variables, making the equation non-linear.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: In row reduction, forward pass produces an echelon form, while backward pass produces:
+
+1. Reduced Echelon Form (RREF)
+2. Inverse Matrix
+3. Transpose Matrix
+4. Characteristic Polynomial
+
+ANSWER: 1
+EXPLANATION: Forward pass creates zeros below pivots (echelon form); backward pass creates zeros above pivots and scales leading entries to 1 (RREF).
+==END==
+
+==QUESTION==
+TOPIC: Solution Sets of Linear Systems
+TEXT: The trivial solution to Ax = 0 is x =
+
+1. The zero vector 0
+2. The identity vector 1
+3. Undefined
+4. Any vector in Col A
+
+ANSWER: 1
+EXPLANATION: The trivial solution refers specifically to x = 0.
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: A set {v_1} containing a single vector is linearly independent if and only if:
+
+1. v_1 is not the zero vector
+2. v_1 is the zero vector
+3. v_1 has unit length
+4. v_1 is in R^2
+
+ANSWER: 1
+EXPLANATION: c*v_1 = 0 has only c = 0 iff v_1 != 0.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: A linear transformation T: R^n -> R^m preserves vector addition and:
+
+1. Scalar multiplication
+2. Matrix inversion
+3. Determinant signs
+4. Vector cross products
+
+ANSWER: 1
+EXPLANATION: By definition, linearity requires preservation of addition and scalar multiplication.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: If A is a 2 x 3 matrix and B is a 2 x 3 matrix, is AB defined?
+
+1. No, because columns of A (3) != rows of B (2)
+2. Yes, yielding a 2 x 2 matrix
+3. Yes, yielding a 3 x 3 matrix
+4. Yes, yielding a 2 x 3 matrix
+
+ANSWER: 1
+EXPLANATION: For AB, inner dimensions must match. Here (2x3) * (2x3) has inner dimensions 3 and 2, which are unequal.
+==END==
+
+==QUESTION==
+TOPIC: Characterization of Invertible Matrices
+TEXT: If A is an n x n invertible matrix, the transformation x |-> Ax is:
+
+1. Both one-to-one and onto
+2. Neither one-to-one nor onto
+3. One-to-one but not onto
+4. Onto but not one-to-one
+
+ANSWER: 1
+EXPLANATION: By the IMT, invertibility implies the mapping is both one-to-one and onto R^n.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: If A is a 3 x 3 matrix with det(A) = 2, what is det(A^2)?
+
+1. 4
+2. 2
+3. 8
+4. 16
+
+ANSWER: 1
+EXPLANATION: det(A^2) = det(A * A) = det(A) * det(A) = 2 * 2 = 4.
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces, Null Space, Column Space
+TEXT: The zero space {0} has dimension:
+
+1. 0
+2. 1
+3. Undefined
+4. Infinity
+
+ANSWER: 1
+EXPLANATION: The empty set is the basis for {0}, so dim({0}) = 0.
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: If Ax = 3x, then 3 is an:
+
+1. Eigenvalue of A
+2. Eigenvector of A
+3. Eigenspace of A
+4. Entry of A
+
+ANSWER: 1
+EXPLANATION: In Ax = lambda*x, scalar 3 represents the eigenvalue.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: In a system of linear equations, variables are raised to what power?
+
+1. Power 1
+2. Power 2
+3. Power 0
+4. Any power
+
+ANSWER: 1
+EXPLANATION: Linear equations involve variables appearing only to the first power.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: Which of the following is a 2x2 system of linear equations?
+
+1. x + y = 2, 2x - y = 1
+2. x^2 + y = 2, x - y = 0
+3. x*y = 1, x + y = 2
+4. sin(x) + y = 0, x = 1
+
+ANSWER: 1
+EXPLANATION: x + y = 2 and 2x - y = 1 are both linear equations with 2 variables.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: What is the first step in the forward pass of row reduction?
+
+1. Locate the leftmost non-zero column (pivot column)
+2. Divide the bottom row by 2
+3. Swap row 1 and row 3 automatically
+4. Multiply the matrix by identity
+
+ANSWER: 1
+EXPLANATION: Row reduction begins by identifying the leftmost non-zero column to establish a pivot position.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: A position in a matrix that corresponds to a leading 1 in its RREF is called a:
+
+1. Pivot position
+2. Determinant entry
+3. Free position
+4. Eigen-entry
+
+ANSWER: 1
+EXPLANATION: Pivot positions are the locations corresponding to leading entries in echelon form.
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: The set Span{v_1} for a non-zero vector v_1 in R^3 represents:
+
+1. A line passing through the origin
+2. A plane through the origin
+3. The origin only
+4. All of R^3
+
+ANSWER: 1
+EXPLANATION: Scalar multiples c*v_1 trace out a straight line passing through the origin in R^3.
+==END==
+
+==QUESTION==
+TOPIC: The Matrix Equation Ax = b
+TEXT: If A is a 3x3 identity matrix I_3, what is Ax for x = [1, 2, 3]^T?
+
+1. [1, 2, 3]^T
+2. [0, 0, 0]^T
+3. [3, 2, 1]^T
+4. [6, 6, 6]^T
+
+ANSWER: 1
+EXPLANATION: Multiplying by the identity matrix leaves vector x unchanged: I_3 * x = x.
+==END==
+
+==QUESTION==
+TOPIC: Solution Sets of Linear Systems
+TEXT: A linear system with more variables than equations (underdetermined) that is consistent has:
+
+1. Infinitely many solutions
+2. Exactly one solution
+3. No solution
+4. Cannot be determined
+
+ANSWER: 1
+EXPLANATION: More variables than equations ensures at least one free variable, yielding infinitely many solutions if consistent.
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: If two vectors in R^3 are parallel, they are:
+
+1. Linearly dependent
+2. Linearly independent
+3. Orthogonal
+4. A basis for R^3
+
+ANSWER: 1
+EXPLANATION: Parallel vectors are scalar multiples of each other, making them linearly dependent.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: A matrix transformation T(x) = Ax with a 3x2 matrix A maps from:
+
+1. R^2 into R^3
+2. R^3 into R^2
+3. R^3 into R^3
+4. R^2 into R^2
+
+ANSWER: 1
+EXPLANATION: x must be in R^2 (2 columns), and Ax results in a vector in R^3 (3 rows).
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: Is (A + B)^2 always equal to A^2 + 2AB + B^2 for square matrices A and B?
+
+1. No, because AB is not generally equal to BA
+2. Yes, always
+3. Only if A = 0
+4. Only if B is diagonal
+
+ANSWER: 1
+EXPLANATION: (A+B)(A+B) = A^2 + AB + BA + B^2. Since AB != BA in general, it does not simplify to 2AB.
+==END==
+
+==QUESTION==
+TOPIC: The Inverse of a Matrix
+TEXT: If A is invertible, what is (A^(-1))^(-1)?
+
+1. A
+2. A^T
+3. I
+4. -A
+
+ANSWER: 1
+EXPLANATION: The inverse of an inverse matrix returns the original matrix A.
+==END==
+
+==QUESTION==
+TOPIC: Characterization of Invertible Matrices
+TEXT: If A is a 2x2 matrix with det(A) = 0, then A is:
+
+1. Singular (non-invertible)
+2. Invertible
+3. Identity matrix
+4. Symmetric
+
+ANSWER: 1
+EXPLANATION: det(A) = 0 defines a singular matrix.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: If A is a 3x5 matrix, what is the maximum possible rank of A?
+
+1. 3
+2. 5
+3. 2
+4. 15
+
+ANSWER: 1
+EXPLANATION: Rank cannot exceed the minimum of rows and columns: min(3, 5) = 3.
+==END==
+
+==QUESTION==
+TOPIC: Introduction to Determinants
+TEXT: What is the determinant of [[1, 0], [0, 1]]?
+
+1. 1
+2. 0
+3. 2
+4. -1
+
+ANSWER: 1
+EXPLANATION: det(I_2) = (1*1) - (0*0) = 1.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: If det(A) = 3, what is det(A^(-1))?
+
+1. 1/3
+2. -3
+3. 3
+4. 9
+
+ANSWER: 1
+EXPLANATION: det(A^(-1)) = 1 / det(A) = 1/3.
+==END==
+
+==QUESTION==
+TOPIC: Cramer's Rule
+TEXT: Cramer's Rule calculates variable x_i using:
+
+1. det(A_i) / det(A)
+2. det(A) / det(A_i)
+3. A_i * b
+4. trace(A_i)
+
+ANSWER: 1
+EXPLANATION: Formula x_i = det(A_i) / det(A).
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces, Null Space, Column Space
+TEXT: To find Nul A, set up the system:
+
+1. Ax = 0
+2. Ax = b
+3. A = I
+4. det(A) = 0
+
+ANSWER: 1
+EXPLANATION: Nul A is defined as solutions to Ax = 0.
+==END==
+
+==QUESTION==
+TOPIC: Linearly Independent Sets; Bases
+TEXT: The standard basis for R^2 consists of vectors:
+
+1. [1, 0]^T and [0, 1]^T
+2. [1, 1]^T and [0, 0]^T
+3. [1, 2]^T and [2, 1]^T
+4. [0, 0]^T only
+
+ANSWER: 1
+EXPLANATION: e_1 = [1, 0]^T and e_2 = [0, 1]^T form the standard basis for R^2.
+==END==
+
+==QUESTION==
+TOPIC: The Dimension of a Vector Space
+TEXT: If rank(A) = 3 for a 4x5 matrix A, what is dim(Row A)?
+
+1. 3
+2. 4
+3. 5
+4. 2
+
+ANSWER: 1
+EXPLANATION: dim(Row A) always equals rank(A) = 3.
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: Can the zero vector be an eigenvector?
+
+1. No, by definition eigenvectors must be non-zero
+2. Yes, always
+3. Only for lambda = 0
+4. Only for symmetric matrices
+
+ANSWER: 1
+EXPLANATION: Eigenvectors are explicitly defined to be NON-ZERO vectors.
+==END==
+
+==QUESTION==
+TOPIC: The Characteristic Equation
+TEXT: The roots of the characteristic equation det(A - lambda*I) = 0 are the:
+
+1. Eigenvalues of A
+2. Pivots of A
+3. Determinants of A
+4. Columns of A
+
+ANSWER: 1
+EXPLANATION: Solving det(A - lambda*I) = 0 yields the eigenvalues lambda.
+==END==
+
+==QUESTION==
+TOPIC: Diagonalization
+TEXT: If A = PDP^(-1) with D diagonal, A is:
+
+1. Diagonalizable
+2. Singular
+3. Orthogonal
+4. Symmetric
+
+ANSWER: 1
+EXPLANATION: A = PDP^(-1) is the definition of matrix diagonalization.
+==END==
+
+==QUESTION==
+TOPIC: Inner Product, Length, and Orthogonality
+TEXT: Dot product of [1, 2]^T and [3, -1]^T is:
+
+1. 1
+2. 5
+3. 0
+4. -1
+
+ANSWER: 1
+EXPLANATION: (1*3) + (2*-1) = 3 - 2 = 1.
+==END==
+
+==QUESTION==
+TOPIC: Orthogonal Sets and Projections
+TEXT: If u . v = 0, the vectors u and v are:
+
+1. Orthogonal
+2. Parallel
+3. Equal
+4. Dependent
+
+ANSWER: 1
+EXPLANATION: Zero dot product defines orthogonal vectors.
+==END==
+
+==QUESTION==
+TOPIC: The Gram-Schmidt Process
+TEXT: Gram-Schmidt process generates an:
+
+1. Orthogonal basis
+2. Inverse matrix
+3. Eigenvalue set
+4. Inconsistent system
+
+ANSWER: 1
+EXPLANATION: Gram-Schmidt transforms a basis into an orthogonal basis.
+==END==
+
+==QUESTION==
+TOPIC: Least-Squares Problems
+TEXT: Normal equations for least squares are:
+
+1. (A^T * A) * x_hat = A^T * b
+2. Ax = b
+3. A^T * x = 0
+4. det(A) * x = b
+
+ANSWER: 1
+EXPLANATION: (A^T * A)x_hat = A^T * b defines the normal equations.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: In a linear system, an equation like 0 = 1 indicates:
+
+1. Inconsistency (no solution)
+2. Unique solution
+3. Infinitely many solutions
+4. Trivial solution
+
+ANSWER: 1
+EXPLANATION: A false statement like 0 = 1 means the system has no solution.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: How many leading 1s are in a single column of a matrix in RREF?
+
+1. At most one
+2. Two
+3. Equal to row count
+4. Unlimited
+
+ANSWER: 1
+EXPLANATION: In RREF, each leading 1 is the ONLY non-zero entry in its column.
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: Linear combination of v_1 and v_2 with weights 2 and -3 is:
+
+1. 2*v_1 - 3*v_2
+2. 2*v_1 * (-3*v_2)
+3. v_1 + v_2
+4. 2 - 3
+
+ANSWER: 1
+EXPLANATION: Weights multiply vectors directly: 2*v_1 + (-3)*v_2 = 2*v_1 - 3*v_2.
+==END==
+
+==QUESTION==
+TOPIC: The Matrix Equation Ax = b
+TEXT: If A is a 4x3 matrix, Ax = b is consistent if b is in:
+
+1. Col A
+2. Nul A
+3. Row A
+4. R^3
+
+ANSWER: 1
+EXPLANATION: Ax = b is consistent iff b is in the column space Col A.
+==END==
+
+==QUESTION==
+TOPIC: Solution Sets of Linear Systems
+TEXT: Homogeneous equation Ax = 0 always has at least:
+
+1. The trivial solution
+2. Two solutions
+3. No solution
+4. Infinitely many solutions
+
+ANSWER: 1
+EXPLANATION: x = 0 is always a solution to Ax = 0.
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: A set of 3 non-zero mutually orthogonal vectors in R^3 is:
+
+1. Linearly independent
+2. Linearly dependent
+3. Inconsistent
+4. A line
+
+ANSWER: 1
+EXPLANATION: Non-zero orthogonal vectors are automatically linearly independent.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: Standard basis vector e_1 in R^3 is:
+
+1. [1, 0, 0]^T
+2. [0, 1, 0]^T
+3. [0, 0, 1]^T
+4. [1, 1, 1]^T
+
+ANSWER: 1
+EXPLANATION: e_1 has 1 in the first position and zeros elsewhere: [1, 0, 0]^T.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: If A is 3x3, what is A + 0 (where 0 is zero matrix)?
+
+1. A
+2. 0
+3. 2A
+4. I_3
+
+ANSWER: 1
+EXPLANATION: Adding the zero matrix leaves matrix A unchanged.
+==END==
+
+==QUESTION==
+TOPIC: The Inverse of a Matrix
+TEXT: If A is invertible, then Ax = b has:
+
+1. Unique solution x = A^(-1)b
+2. No solution
+3. Infinitely many solutions
+4. Solution x = b
+
+ANSWER: 1
+EXPLANATION: Invertible A gives unique solution x = A^(-1)b.
+==END==
+
+==QUESTION==
+TOPIC: Characterization of Invertible Matrices
+TEXT: Under IMT, if A is n x n and invertible, rank(A) =
+
+1. n
+2. 0
+3. n - 1
+4. 1
+
+ANSWER: 1
+EXPLANATION: Invertible n x n matrix has n pivots, so rank(A) = n.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: The dimension of Col A for a matrix A is called:
+
+1. Rank of A
+2. Nullity of A
+3. Trace of A
+4. Determinant of A
+
+ANSWER: 1
+EXPLANATION: Rank(A) = dim(Col A).
+==END==
+
+==QUESTION==
+TOPIC: Introduction to Determinants
+TEXT: det([[a, b], [c, d]]) =
+
+1. ad - bc
+2. ab - cd
+3. ac - bd
+4. ad + bc
+
+ANSWER: 1
+EXPLANATION: Standard formula for 2x2 determinant is ad - bc.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: If A has a row of zeros, det(A) =
+
+1. 0
+2. 1
+3. Undefined
+4. Infinity
+
+ANSWER: 1
+EXPLANATION: Expanding along the zero row yields det(A) = 0.
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces, Null Space, Column Space
+TEXT: Is Nul A a subspace?
+
+1. Yes, always
+2. No
+3. Only if A is square
+4. Only if det A != 0
+
+ANSWER: 1
+EXPLANATION: Nul A satisfies all subspace axioms for any matrix A.
+==END==
+
+==QUESTION==
+TOPIC: Linearly Independent Sets; Bases
+TEXT: Minimum number of vectors to span R^n is:
+
+1. n
+2. n + 1
+3. n - 1
+4. 1
+
+ANSWER: 1
+EXPLANATION: At least n vectors are required to span an n-dimensional space R^n.
+==END==
+
+==QUESTION==
+TOPIC: The Dimension of a Vector Space
+TEXT: Basis for R^3 contains exactly:
+
+1. 3 vectors
+2. 2 vectors
+3. 4 vectors
+4. 1 vector
+
+ANSWER: 1
+EXPLANATION: dim(R^3) = 3, so every basis for R^3 contains 3 vectors.
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: If lambda is an eigenvalue of A, then det(A - lambda*I) =
+
+1. 0
+2. 1
+3. -1
+4. Trace(A)
+
+ANSWER: 1
+EXPLANATION: Definition of characteristic equation det(A - lambda*I) = 0.
+==END==
+
+==QUESTION==
+TOPIC: Inner Product, Length, and Orthogonality
+TEXT: Vector v is a unit vector if ||v|| =
+
+1. 1
+2. 0
+3. 2
+4. -1
+
+ANSWER: 1
+EXPLANATION: Unit vector definition: length = 1.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: Can a linear system have exactly 2 solutions?
+
+1. No, never
+2. Yes
+3. Only if 2x2
+4. Only if homogeneous
+
+ANSWER: 1
+EXPLANATION: Linear systems have 0, 1, or infinitely many solutions. Never 2.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: In RREF, every leading entry is:
+
+1. 1
+2. 0
+3. Any non-zero scalar
+4. Negative
+
+ANSWER: 1
+EXPLANATION: RREF requires leading entries to be scaled to 1.
+==END==
+
+==QUESTION==
+TOPIC: The Matrix Equation Ax = b
+TEXT: Ax = b is consistent iff b is in:
+
+1. Span of columns of A
+2. Nul A
+3. Row A
+4. R^1
+
+ANSWER: 1
+EXPLANATION: b must be a linear combination of A's columns (Col A).
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: Set {[0, 0]^T} is:
+
+1. Linearly dependent
+2. Linearly independent
+3. A basis for R^2
+4. Orthogonal unit set
+
+ANSWER: 1
+EXPLANATION: Any set containing the zero vector is linearly dependent.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: T(c*u) = c*T(u) reflects:
+
+1. Preservation of scalar multiplication
+2. Preservation of vector addition
+3. Matrix inversion
+4. Determinant scaling
+
+ANSWER: 1
+EXPLANATION: This property defines scalar multiplication preservation in linear transformations.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: A * B != B * A illustrates that matrix multiplication is:
+
+1. Non-commutative
+2. Non-associative
+3. Non-distributive
+4. Inconsistent
+
+ANSWER: 1
+EXPLANATION: Matrix multiplication does not commute in general.
+==END==
+
+==QUESTION==
+TOPIC: The Inverse of a Matrix
+TEXT: Matrix A has an inverse iff det(A) !=
+
+1. 0
+2. 1
+3. -1
+4. 2
+
+ANSWER: 1
+EXPLANATION: Invertibility requires det(A) != 0.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: Dimension of Col A equals:
+
+1. Number of pivot columns
+2. Number of free variables
+3. Number of rows
+4. Total columns
+
+ANSWER: 1
+EXPLANATION: dim(Col A) = rank(A) = number of pivot columns.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: det(A*B) =
+
+1. det(A) * det(B)
+2. det(A) + det(B)
+3. det(A) / det(B)
+4. det(A - B)
+
+ANSWER: 1
+EXPLANATION: Determinant of a product is product of determinants.
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: Eigenvalues of diagonal matrix [[2, 0], [0, 5]] are:
+
+1. 2 and 5
+2. 0 and 0
+3. 7 and 10
+4. 1 and 1
+
+ANSWER: 1
+EXPLANATION: Diagonal entries are the eigenvalues.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: System with no solutions is called:
+
+1. Inconsistent
+2. Consistent
+3. Homogeneous
+4. Equivalent
+
+ANSWER: 1
+EXPLANATION: Definition of inconsistent system.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: Free variables correspond to columns that:
+
+1. Do NOT contain pivot positions
+2. Contain pivot positions
+3. Are all zeros
+4. Are the augmented column
+
+ANSWER: 1
+EXPLANATION: Non-pivot columns correspond to free variables.
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: Span of empty set is defined as:
+
+1. {0} (zero vector space)
+2. Empty set
+3. R^n
+4. Undefined
+
+ANSWER: 1
+EXPLANATION: Span of empty set is conventionally defined as {0}.
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: Vectors u and v are dependent if u =
+
+1. c * v (scalar multiple)
+2. v + 1
+3. v^2
+4. 0 only
+
+ANSWER: 1
+EXPLANATION: Two vectors are dependent iff one is a scalar multiple of the other.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: Standard basis vector e_2 in R^2 is:
+
+1. [0, 1]^T
+2. [1, 0]^T
+3. [1, 1]^T
+4. [0, 0]^T
+
+ANSWER: 1
+EXPLANATION: e_2 = [0, 1]^T in R^2.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: Identity matrix I has entries:
+
+1. 1 on main diagonal, 0 elsewhere
+2. 0 on main diagonal, 1 elsewhere
+3. All ones
+4. All zeros
+
+ANSWER: 1
+EXPLANATION: Definition of identity matrix I.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: dim(Nul A) equals:
+
+1. Number of free variables
+2. Number of pivot columns
+3. Number of rows
+4. Rank(A)
+
+ANSWER: 1
+EXPLANATION: Dimension of Nul A corresponds to number of free variables in Ax = 0.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: det(I) =
+
+1. 1
+2. 0
+3. n
+4. Undefined
+
+ANSWER: 1
+EXPLANATION: Determinant of identity matrix is 1.
+==END==
+
+==QUESTION==
+TOPIC: Inner Product, Length, and Orthogonality
+TEXT: u . v equals:
+
+1. v . u (commutative)
+2. -v . u
+3. 1 / (v . u)
+4. u + v
+
+ANSWER: 1
+EXPLANATION: Inner product is commutative: u . v = v . u.
+==END==
+
+==QUESTION==
+TOPIC: Least-Squares Problems
+TEXT: Least-squares solution minimizes distance between Ax and:
+
+1. b
+2. 0
+3. x
+4. A
+
+ANSWER: 1
+EXPLANATION: Minimizes distance ||Ax - b||.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: An equation x_1 + 2*x_2 = 3 represents what shape in R^2?
+
+1. A line
+2. A plane
+3. A point
+4. A circle
+
+ANSWER: 1
+EXPLANATION: Linear equation in 2 variables defines a line in R^2.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: Pivot columns of A form a basis for:
+
+1. Col A
+2. Nul A
+3. Row A
+4. R^n
+
+ANSWER: 1
+EXPLANATION: Pivot columns of original matrix form a basis for Col A.
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: If set is independent, Ax = 0 has:
+
+1. Only trivial solution
+2. Infinitely many solutions
+3. No solution
+4. Non-trivial solutions
+
+ANSWER: 1
+EXPLANATION: Independence means c_1*v_1 + ... = 0 has only trivial solution.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: A^T is obtained by:
+
+1. Interchanging rows and columns of A
+2. Inverting A
+3. Negating entries
+4. Squaring entries
+
+ANSWER: 1
+EXPLANATION: Transpose flips matrix over its main diagonal (swaps rows/cols).
+==END==
+
+==QUESTION==
+TOPIC: Characterization of Invertible Matrices
+TEXT: Invertible matrix A has det(A)
+
+1. != 0
+2. = 0
+3. < 0
+4. = 1 only
+
+ANSWER: 1
+EXPLANATION: Non-zero determinant characterizes invertible matrices.
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces, Null Space, Column Space
+TEXT: Basis vectors must be:
+
+1. Linearly independent and span the space
+2. Dependent
+3. Orthogonal only
+4. Non-zero only
+
+ANSWER: 1
+EXPLANATION: Definition of basis.
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: Ax = lambda*x equation requires x to be:
+
+1. Non-zero vector
+2. Zero vector
+3. Scalar
+4. Matrix
+
+ANSWER: 1
+EXPLANATION: Eigenvectors must be non-zero vectors.
+==END==
+
+==QUESTION==
+TOPIC: Inner Product, Length, and Orthogonality
+TEXT: Distance between u and v is:
+
+1. ||u - v||
+2. ||u + v||
+3. u . v
+4. ||u|| * ||v||
+
+ANSWER: 1
+EXPLANATION: Distance formula ||u - v||.
+==END==
+
+==QUESTION==
+TOPIC: The Gram-Schmidt Process
+TEXT: First step in Gram-Schmidt sets v_1 =
+
+1. x_1
+2. 0
+3. x_1 + x_2
+4. x_2
+
+ANSWER: 1
+EXPLANATION: First orthogonal vector v_1 = x_1.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: Consistent system has:
+
+1. One or infinitely many solutions
+2. No solution
+3. Exactly two solutions
+4. Negative solutions only
+
+ANSWER: 1
+EXPLANATION: Definition of consistent system (at least one solution).
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: Leading entry in a row is:
+
+1. Leftmost non-zero entry
+2. Rightmost entry
+3. Middle entry
+4. Largest entry
+
+ANSWER: 1
+EXPLANATION: Definition of leading entry.
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: Vector [0, 0, 0]^T in R^3 is the:
+
+1. Zero vector
+2. Unit vector
+3. Pivot vector
+4. Identity matrix
+
+ANSWER: 1
+EXPLANATION: Vector with all zero entries is the zero vector.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: Transformation T is linear if T(0) =
+
+1. 0
+2. 1
+3. Undefined
+4. -1
+
+ANSWER: 1
+EXPLANATION: Linear transformations always map 0 to 0.
+==END==
+
+==QUESTION==
+TOPIC: The Inverse of a Matrix
+TEXT: A * A^(-1) =
+
+1. Identity matrix I
+2. Zero matrix 0
+3. A^2
+4. 2A
+
+ANSWER: 1
+EXPLANATION: Definition of inverse matrix.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: Dimension of R^n is:
+
+1. n
+2. n - 1
+3. 2^n
+4. 1
+
+ANSWER: 1
+EXPLANATION: R^n has dimension n (standard basis has n vectors).
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: det(A^T) =
+
+1. det(A)
+2. -det(A)
+3. 1 / det(A)
+4. 0
+
+ANSWER: 1
+EXPLANATION: Determinant of transpose equals original determinant.
+==END==
+
+==QUESTION==
+TOPIC: The Characteristic Equation
+TEXT: Characteristic polynomial degree for n x n matrix is:
+
+1. n
+2. n^2
+3. 2
+4. 1
+
+ANSWER: 1
+EXPLANATION: Degree of det(A - lambda*I) is n.
+==END==
+
+==QUESTION==
+TOPIC: Diagonalization
+TEXT: In A = PDP^(-1), D is a:
+
+1. Diagonal matrix
+2. Zero matrix
+3. Triangular matrix
+4. Symmetric matrix
+
+ANSWER: 1
+EXPLANATION: D stands for diagonal matrix of eigenvalues.
+==END==
+
+==QUESTION==
+TOPIC: Orthogonal Sets and Projections
+TEXT: If u and v are orthogonal, u . v =
+
+1. 0
+2. 1
+3. -1
+4. ||u||
+
+ANSWER: 1
+EXPLANATION: Definition of orthogonal vectors.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: System x + y = 1, x + y = 2 has:
+
+1. No solution
+2. Unique solution
+3. Infinitely many solutions
+4. Solution (1, 1)
+
+ANSWER: 1
+EXPLANATION: Parallel lines with different intercepts never intersect (inconsistent).
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: Matrix in echelon form has zeros:
+
+1. Below each pivot
+2. Above each pivot only
+3. Nowhere
+4. On diagonal only
+
+ANSWER: 1
+EXPLANATION: Echelon form requires all entries below a leading entry to be zero.
+==END==
+
+==QUESTION==
+TOPIC: Solution Sets of Linear Systems
+TEXT: General solution to Ax = 0 expressed using free variables is:
+
+1. Parametric vector form
+2. Echelon form
+3. Inverse form
+4. Normal form
+
+ANSWER: 1
+EXPLANATION: Solution written as linear combination of vectors with free variable parameters.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: One-to-one transformation means:
+
+1. Each output comes from at most one input
+2. Every output is hit
+3. Output is always zero
+4. Matrix is square
+
+ANSWER: 1
+EXPLANATION: Definition of one-to-one (injective) mapping.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: Scalar multiplication k*A multiplies:
+
+1. Every entry of A by k
+2. Diagonal entries only
+3. First row only
+4. First column only
+
+ANSWER: 1
+EXPLANATION: Scalar scales every entry in the matrix.
+==END==
+
+==QUESTION==
+TOPIC: Characterization of Invertible Matrices
+TEXT: If A is invertible, Ax = 0 has:
+
+1. Only trivial solution
+2. Infinitely many solutions
+3. No solution
+4. Two solutions
+
+ANSWER: 1
+EXPLANATION: Invertible matrix implies trivial solution only for Ax = 0.
+==END==
+
+==QUESTION==
+TOPIC: Introduction to Determinants
+TEXT: Determinant is defined for:
+
+1. Square matrices only
+2. Any matrix
+3. Vectors only
+4. Scalars only
+
+ANSWER: 1
+EXPLANATION: Determinants are defined strictly for square (n x n) matrices.
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces, Null Space, Column Space
+TEXT: Col A is spanned by:
+
+1. Columns of A
+2. Rows of A
+3. Solutions to Ax = 0
+4. Identity matrix
+
+ANSWER: 1
+EXPLANATION: Column space is the span of matrix columns.
+==END==
+
+==QUESTION==
+TOPIC: The Dimension of a Vector Space
+TEXT: Rank-Nullity Theorem: rank(A) + dim(Nul A) =
+
+1. Number of columns of A
+2. Number of rows of A
+3. Determinant of A
+4. 0
+
+ANSWER: 1
+EXPLANATION: Rank + Nullity = n (number of columns).
+==END==
+
+==QUESTION==
+TOPIC: Inner Product, Length, and Orthogonality
+TEXT: Length of vector [1, 1]^T is:
+
+1. sqrt(2)
+2. 2
+3. 1
+4. 0
+
+ANSWER: 1
+EXPLANATION: sqrt(1^2 + 1^2) = sqrt(2).
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: A 3x3 system has 3 equations and:
+
+1. 3 variables
+2. 9 variables
+3. 1 variable
+4. 6 variables
+
+ANSWER: 1
+EXPLANATION: A 3x3 system involves 3 equations and 3 variables.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: Augmented matrix [A | b] has extra column for:
+
+1. Constants b
+2. Free variables
+3. Pivots
+4. Determinants
+
+ANSWER: 1
+EXPLANATION: Rightmost column holds system constants b.
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: Set of 2 non-parallel vectors in R^2 is:
+
+1. Linearly independent
+2. Linearly dependent
+3. Inconsistent
+4. A point
+
+ANSWER: 1
+EXPLANATION: Non-parallel vectors in R^2 are independent.
+==END==
+
+==QUESTION==
+TOPIC: The Inverse of a Matrix
+TEXT: Inverse of 1x1 matrix [a] (a != 0) is:
+
+1. [1/a]
+2. [-a]
+3. [a]
+4. [0]
+
+ANSWER: 1
+EXPLANATION: Reciprocal of non-zero scalar a is 1/a.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: Basis for R^n has exactly:
+
+1. n vectors
+2. 1 vector
+3. 2 vectors
+4. Infinite vectors
+
+ANSWER: 1
+EXPLANATION: Dimension of R^n is n.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: det(A) = 0 implies A is:
+
+1. Singular (non-invertible)
+2. Invertible
+3. Identity
+4. Symmetric
+
+ANSWER: 1
+EXPLANATION: Zero determinant defines singular matrix.
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: Eigenvalues of upper triangular matrix are on its:
+
+1. Main diagonal
+2. First row
+3. Last column
+4. Off-diagonal
+
+ANSWER: 1
+EXPLANATION: Diagonal entries of triangular matrix are its eigenvalues.
+==END==
+
+==QUESTION==
+TOPIC: The Gram-Schmidt Process
+TEXT: Gram-Schmidt process requires input vectors to be:
+
+1. Linearly independent
+2. Dependent
+3. Orthogonal
+4. Zero vectors
+
+ANSWER: 1
+EXPLANATION: Input basis must be linearly independent.
+==END==
+
+==QUESTION==
+TOPIC: Least-Squares Problems
+TEXT: Least-squares solution exists for every linear system Ax = b.
+
+1. True
+2. False
+3. Only if A is square
+4. Only if b = 0
+
+ANSWER: 1
+EXPLANATION: Normal equations always have at least one least-squares solution.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: System x = 1, y = 2 has:
+
+1. Unique solution (1, 2)
+2. No solution
+3. Infinitely many solutions
+4. Trivial solution only
+
+ANSWER: 1
+EXPLANATION: Explicit solution given for both variables.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: Matrix with pivot in every row has:
+
+1. No row of zeros in echelon form
+2. A free variable
+3. No solution
+4. Zero rank
+
+ANSWER: 1
+EXPLANATION: Pivot in every row means every row contains a leading entry.
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: Vector addition is performed:
+
+1. Entrywise
+2. Cross-wise
+3. Multiplicatively
+4. On diagonals only
+
+ANSWER: 1
+EXPLANATION: Vectors add by adding corresponding components.
+==END==
+
+==QUESTION==
+TOPIC: The Matrix Equation Ax = b
+TEXT: If A is m x n, Ax is linear combination of columns of A with weights from:
+
+1. Vector x
+2. Matrix A
+3. Vector b
+4. Identity matrix
+
+ANSWER: 1
+EXPLANATION: Entries of x act as scalar weights for columns of A.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: Range of linear transformation T: R^n -> R^m is subset of:
+
+1. Codomain R^m
+2. Domain R^n
+3. R^1
+4. Complex numbers
+
+ANSWER: 1
+EXPLANATION: Output vectors land in codomain R^m.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: A^T^T (transpose of transpose) equals:
+
+1. A
+2. -A
+3. A^(-1)
+4. I
+
+ANSWER: 1
+EXPLANATION: Transposing twice returns the original matrix A.
+==END==
+
+==QUESTION==
+TOPIC: Characterization of Invertible Matrices
+TEXT: If A is n x n and invertible, columns of A form a basis for:
+
+1. R^n
+2. {0}
+3. R^1
+4. Empty space
+
+ANSWER: 1
+EXPLANATION: n independent vectors in R^n form a basis for R^n.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: det(A^(-1)) =
+
+1. 1 / det(A)
+2. det(A)
+3. -det(A)
+4. (det A)^2
+
+ANSWER: 1
+EXPLANATION: Inverse property of determinants.
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces, Null Space, Column Space
+TEXT: Subspace containing only 0 vector has dimension:
+
+1. 0
+2. 1
+3. Undefined
+4. n
+
+ANSWER: 1
+EXPLANATION: Zero subspace has dimension 0.
+==END==
+
+==QUESTION==
+TOPIC: Diagonalization
+TEXT: A = PDP^(-1) implies A^2 =
+
+1. P * D^2 * P^(-1)
+2. P^2 * D^2
+3. P * D * P^(-1)
+4. D^2
+
+ANSWER: 1
+EXPLANATION: (PDP^(-1))(PDP^(-1)) = P D^2 P^(-1).
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: Linear equation 0*x_1 + 0*x_2 = 0 has:
+
+1. Infinitely many solutions
+2. No solution
+3. Unique solution (0,0)
+4. Exactly one solution
+
+ANSWER: 1
+EXPLANATION: 0 = 0 is always true for any values of x_1 and x_2.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: RREF matrix has leading 1s as the ONLY non-zero entry in their:
+
+1. Column
+2. Row only
+3. Matrix
+4. Diagonal
+
+ANSWER: 1
+EXPLANATION: Definition of RREF requirement for columns containing leading 1s.
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: Set {v_1, v_2} with v_2 = 3*v_1 is:
+
+1. Linearly dependent
+2. Linearly independent
+3. A basis
+4. Orthogonal
+
+ANSWER: 1
+EXPLANATION: One vector is a scalar multiple of the other.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: T(u + v) = T(u) + T(v) reflects:
+
+1. Preservation of vector addition
+2. Preservation of scalar multiplication
+3. Matrix multiplication
+4. Invertibility
+
+ANSWER: 1
+EXPLANATION: Definition of vector addition preservation.
+==END==
+
+==QUESTION==
+TOPIC: The Inverse of a Matrix
+TEXT: Inverse of product (AB)^(-1) =
+
+1. B^(-1) * A^(-1)
+2. A^(-1) * B^(-1)
+3. A * B
+4. B * A
+
+ANSWER: 1
+EXPLANATION: Reverses order of matrix inverses.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: Basis for Col A uses pivot columns of:
+
+1. Original matrix A
+2. Reduced matrix RREF
+3. Transpose matrix
+4. Augmented matrix
+
+ANSWER: 1
+EXPLANATION: Must use original matrix A columns.
+==END==
+
+==QUESTION==
+TOPIC: Introduction to Determinants
+TEXT: Determinant of 3x3 diagonal matrix [[2,0,0],[0,3,0],[0,0,4]] is:
+
+1. 24
+2. 9
+3. 0
+4. 12
+
+ANSWER: 1
+EXPLANATION: Product of diagonal entries: 2 * 3 * 4 = 24.
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: Ax = lambda*x with x != 0 defines lambda as:
+
+1. Eigenvalue
+2. Pivot
+3. Determinant
+4. Trace
+
+ANSWER: 1
+EXPLANATION: Standard definition of eigenvalue.
+==END==
+
+==QUESTION==
+TOPIC: Inner Product, Length, and Orthogonality
+TEXT: u . v = 0 means u and v are:
+
+1. Orthogonal
+2. Parallel
+3. Equal
+4. Dependent
+
+ANSWER: 1
+EXPLANATION: Definition of orthogonal vectors.
+==END==
+
+==QUESTION==
+TOPIC: Least-Squares Problems
+TEXT: Least-squares solution minimizes ||Ax - b||^2.
+
+1. True
+2. False
+3. Only for 2x2
+4. Only if det A != 0
+
+ANSWER: 1
+EXPLANATION: Minimizing norm is equivalent to minimizing squared norm.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: Augmented matrix row [0 0 | 1] represents equation:
+
+1. 0 = 1
+2. x_1 + x_2 = 1
+3. x_2 = 1
+4. 0 = 0
+
+ANSWER: 1
+EXPLANATION: 0*x_1 + 0*x_2 = 1 simplifies to 0 = 1.
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: Vector [1, 2]^T + [3, 4]^T =
+
+1. [4, 6]^T
+2. [3, 8]^T
+3. [1, 2]^T
+4. [5, 5]^T
+
+ANSWER: 1
+EXPLANATION: [1+3, 2+4]^T = [4, 6]^T.
+==END==
+
+==QUESTION==
+TOPIC: The Matrix Equation Ax = b
+TEXT: If A is 2x2 and b is in R^2, Ax = b has solution if b is in:
+
+1. Col A
+2. Nul A
+3. R^1
+4. {0}
+
+ANSWER: 1
+EXPLANATION: b must belong to column space of A.
+==END==
+
+==QUESTION==
+TOPIC: Solution Sets of Linear Systems
+TEXT: Ax = 0 has non-trivial solutions iff A has:
+
+1. At least one free variable
+2. Pivot in every column
+3. Invertible matrix
+4. Determinant != 0
+
+ANSWER: 1
+EXPLANATION: Free variables allow non-zero solutions.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: 2 * [[1, 2], [3, 4]] =
+
+1. [[2, 4], [6, 8]]
+2. [[1, 2], [3, 4]]
+3. [[2, 2], [3, 4]]
+4. [[3, 4], [5, 6]]
+
+ANSWER: 1
+EXPLANATION: Scale every entry by 2.
+==END==
+
+==QUESTION==
+TOPIC: Characterization of Invertible Matrices
+TEXT: Invertible matrix A is row equivalent to:
+
+1. Identity matrix I
+2. Zero matrix 0
+3. Any matrix
+4. Diagonal matrix only
+
+ANSWER: 1
+EXPLANATION: Row reduces directly to identity matrix.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: Dimension of plane through origin in R^3 is:
+
+1. 2
+2. 3
+3. 1
+4. 0
+
+ANSWER: 1
+EXPLANATION: Planes through origin are 2-dimensional subspaces.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: det(A) != 0 means A is:
+
+1. Invertible
+2. Singular
+3. Zero matrix
+4. Symmetric
+
+ANSWER: 1
+EXPLANATION: Non-zero determinant implies invertibility.
+==END==
+
+==QUESTION==
+TOPIC: The Dimension of a Vector Space
+TEXT: Dimension of R^4 is:
+
+1. 4
+2. 3
+3. 16
+4. 1
+
+ANSWER: 1
+EXPLANATION: Standard space R^4 has dimension 4.
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: Eigenspace Nul(A - lambda*I) is a subspace.
+
+1. True
+2. False
+3. Only if lambda = 0
+4. Only for 2x2
+
+ANSWER: 1
+EXPLANATION: Null space of any matrix is a subspace.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: System with unique solution has lines that:
+
+1. Intersect at exactly one point
+2. Are parallel
+3. Are identical
+4. Never meet
+
+ANSWER: 1
+EXPLANATION: Unique solution corresponds to single intersection point.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: First non-zero entry in a row is called:
+
+1. Leading entry
+2. Free variable
+3. Determinant
+4. Trace
+
+ANSWER: 1
+EXPLANATION: Definition of leading entry.
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: 3 * [1, -2]^T =
+
+1. [3, -6]^T
+2. [3, -2]^T
+3. [1, -6]^T
+4. [4, 1]^T
+
+ANSWER: 1
+EXPLANATION: Multiply each component by 3.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: T(x) = Ax represents a:
+
+1. Linear transformation
+2. Non-linear mapping
+3. Quadratic form
+4. Constant function
+
+ANSWER: 1
+EXPLANATION: Matrix multiplication defines a linear transformation.
+==END==
+
+==QUESTION==
+TOPIC: The Inverse of a Matrix
+TEXT: (A^T)^(-1) =
+
+1. (A^(-1))^T
+2. A
+3. A^T
+4. I
+
+ANSWER: 1
+EXPLANATION: Transpose and inverse operations commute.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: Line through origin in R^3 has dimension:
+
+1. 1
+2. 2
+3. 3
+4. 0
+
+ANSWER: 1
+EXPLANATION: Lines through origin are 1-dimensional subspaces.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: det(cA) for 2x2 matrix A is:
+
+1. c^2 * det(A)
+2. c * det(A)
+3. 2c * det(A)
+4. det(A)
+
+ANSWER: 1
+EXPLANATION: For n = 2, det(cA) = c^2 * det(A).
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces, Null Space, Column Space
+TEXT: Nul A contains vectors x such that Ax =
+
+1. 0
+2. b
+3. x
+4. 1
+
+ANSWER: 1
+EXPLANATION: Nul A = {x : Ax = 0}.
+==END==
+
+==QUESTION==
+TOPIC: Linearly Independent Sets; Bases
+TEXT: Basis for vector space V is:
+
+1. Minimal spanning set
+2. Maximal dependent set
+3. Single vector
+4. Infinite set always
+
+ANSWER: 1
+EXPLANATION: A basis can be characterized as a minimal spanning set.
+==END==
+
+==QUESTION==
+TOPIC: Inner Product, Length, and Orthogonality
+TEXT: Norm of vector [3, 0]^T is:
+
+1. 3
+2. 9
+3. 0
+4. 1
+
+ANSWER: 1
+EXPLANATION: sqrt(3^2 + 0^2) = 3.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: System x = 0, y = 0 represents:
+
+1. The origin (0,0) in R^2
+2. Entire line
+3. No solution
+4. All of R^2
+
+ANSWER: 1
+EXPLANATION: Both variables fixed at 0 yields single point at origin.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: In consistent system, number of free variables equals:
+
+1. Total variables minus pivot variables
+2. Total rows
+3. Total pivots
+4. Zero always
+
+ANSWER: 1
+EXPLANATION: Free variables = n - rank(A).
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: Vector v minus vector v equals:
+
+1. Zero vector 0
+2. Vector v
+3. 2v
+4. Scalar 0
+
+ANSWER: 1
+EXPLANATION: v - v = 0 vector.
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: Vectors [1, 0]^T and [0, 1]^T are:
+
+1. Linearly independent
+2. Linearly dependent
+3. Parallel
+4. Inconsistent
+
+ANSWER: 1
+EXPLANATION: Standard basis vectors are linearly independent.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: Identity matrix for 2x2 is:
+
+1. [[1, 0], [0, 1]]
+2. [[0, 1], [1, 0]]
+3. [[1, 1], [1, 1]]
+4. [[0, 0], [0, 0]]
+
+ANSWER: 1
+EXPLANATION: Standard 2x2 identity matrix I_2.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: Zero vector space {0} has dimension:
+
+1. 0
+2. 1
+3. Undefined
+4. Infinity
+
+ANSWER: 1
+EXPLANATION: dim({0}) = 0.
+==END==
+
+==QUESTION==
+TOPIC: Introduction to Determinants
+TEXT: det([[5]]) =
+
+1. 5
+2. 0
+3. 1
+4. -5
+
+ANSWER: 1
+EXPLANATION: Determinant of 1x1 matrix is its single entry.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: det(A) * det(A^(-1)) =
+
+1. 1
+2. 0
+3. det(A)^2
+4. 2
+
+ANSWER: 1
+EXPLANATION: det(A * A^(-1)) = det(I) = 1.
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: Ax = 0x implies x is in:
+
+1. Nul A
+2. Col A
+3. Row A
+4. R^1
+
+ANSWER: 1
+EXPLANATION: Ax = 0 defines membership in Nul A.
+==END==
+
+==QUESTION==
+TOPIC: Least-Squares Problems
+TEXT: Least-squares problem finds x minimizing ||Ax - b||.
+
+1. True
+2. False
+3. Only if A is invertible
+4. Only for 3x3
+
+ANSWER: 1
+EXPLANATION: Definition of least-squares problem.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: Linear system 2x = 4 has solution x =
+
+1. 2
+2. 4
+3. 0.5
+4. 8
+
+ANSWER: 1
+EXPLANATION: x = 4 / 2 = 2.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: Matrix with row [0 0 0] in echelon form has:
+
+1. A zero row at bottom
+2. No solutions
+3. Full rank
+4. Invertibility
+
+ANSWER: 1
+EXPLANATION: Zero rows are placed at the bottom in echelon form.
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: Span{v} is a line if v is:
+
+1. Non-zero vector
+2. Zero vector
+3. Matrix
+4. Scalar
+
+ANSWER: 1
+EXPLANATION: Non-zero vector span forms a line through origin.
+==END==
+
+==QUESTION==
+TOPIC: The Matrix Equation Ax = b
+TEXT: Ax = b has solution iff b is in:
+
+1. Col A
+2. Nul A
+3. Row A
+4. R^1
+
+ANSWER: 1
+EXPLANATION: b must be linear combination of columns of A.
+==END==
+
+==QUESTION==
+TOPIC: Solution Sets of Linear Systems
+TEXT: Homogeneous system Ax = 0 is consistent for:
+
+1. Every matrix A
+2. Square matrices only
+3. Invertible matrices only
+4. Non-zero matrices only
+
+ANSWER: 1
+EXPLANATION: x = 0 always satisfies Ax = 0.
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: Set containing zero vector is ALWAYS:
+
+1. Linearly dependent
+2. Linearly independent
+3. A basis
+4. Orthogonal
+
+ANSWER: 1
+EXPLANATION: Zero vector guarantees linear dependence.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: Standard matrix for identity transformation is:
+
+1. Identity matrix I
+2. Zero matrix 0
+3. Diagonal matrix with 2s
+4. Permutation matrix
+
+ANSWER: 1
+EXPLANATION: T(x) = x corresponds to matrix I since Ix = x.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: A + B = B + A shows matrix addition is:
+
+1. Commutative
+2. Associative
+3. Non-commutative
+4. Inconsistent
+
+ANSWER: 1
+EXPLANATION: Addition commutes for matrices of same dimensions.
+==END==
+
+==QUESTION==
+TOPIC: The Inverse of a Matrix
+TEXT: Square matrix with no inverse is called:
+
+1. Singular
+2. Non-singular
+3. Identity
+4. Symmetric
+
+ANSWER: 1
+EXPLANATION: Definition of singular matrix.
+==END==
+
+==QUESTION==
+TOPIC: Characterization of Invertible Matrices
+TEXT: Invertible matrix A has columns that are:
+
+1. Linearly independent and span R^n
+2. Dependent
+3. Zero vectors
+4. Parallel
+
+ANSWER: 1
+EXPLANATION: IMT property for columns of invertible matrix.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: Rank of 3x3 identity matrix I_3 is:
+
+1. 3
+2. 0
+3. 1
+4. 9
+
+ANSWER: 1
+EXPLANATION: I_3 has 3 pivot positions, so rank is 3.
+==END==
+
+==QUESTION==
+TOPIC: Introduction to Determinants
+TEXT: det([[1, 2], [3, 4]]) =
+
+1. -2
+2. 2
+3. 10
+4. -10
+
+ANSWER: 1
+EXPLANATION: (1*4) - (2*3) = 4 - 6 = -2.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: Swapping two rows of matrix A:
+
+1. Multiplies det(A) by -1
+2. Leaves det(A) unchanged
+3. Squares det(A)
+4. Sets det(A) to 0
+
+ANSWER: 1
+EXPLANATION: Single row swap flips sign of determinant.
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces, Null Space, Column Space
+TEXT: Dimension of Nul A is number of:
+
+1. Free variables
+2. Pivot columns
+3. Rows
+4. Total columns
+
+ANSWER: 1
+EXPLANATION: dim(Nul A) = count of free variables.
+==END==
+
+==QUESTION==
+TOPIC: Linearly Independent Sets; Bases
+TEXT: Basis for subspace must span the subspace and be:
+
+1. Linearly independent
+2. Dependent
+3. Orthogonal only
+4. Infinite
+
+ANSWER: 1
+EXPLANATION: Dual definition requirements for basis.
+==END==
+
+==QUESTION==
+TOPIC: The Dimension of a Vector Space
+TEXT: dim(Col A) + dim(Nul A) =
+
+1. Total columns n
+2. Rows m
+3. 0
+4. Rank(A)
+
+ANSWER: 1
+EXPLANATION: Rank-Nullity Theorem formula.
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: Eigenvalues of [[3, 0], [0, 3]] are:
+
+1. 3 (with multiplicity 2)
+2. 0 and 3
+3. 9 and 0
+4. 6 and 6
+
+ANSWER: 1
+EXPLANATION: Both diagonal entries are 3.
+==END==
+
+==QUESTION==
+TOPIC: Inner Product, Length, and Orthogonality
+TEXT: Dot product of vector with itself v . v equals:
+
+1. ||v||^2
+2. ||v||
+3. 0
+4. 1
+
+ANSWER: 1
+EXPLANATION: v . v = square of norm ||v||^2.
+==END==
+
+==QUESTION==
+TOPIC: The Gram-Schmidt Process
+TEXT: Gram-Schmidt process converts basis into:
+
+1. Orthogonal basis
+2. Eigenvalues
+3. Inverse matrix
+4. Determinant
+
+ANSWER: 1
+EXPLANATION: Core function of Gram-Schmidt algorithm.
+==END==
+
+==QUESTION==
+TOPIC: Least-Squares Problems
+TEXT: Least-squares normal equation is (A^T * A) * x_hat =
+
+1. A^T * b
+2. b
+3. 0
+4. A * b
+
+ANSWER: 1
+EXPLANATION: Standard normal equation form.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: System with infinitely many solutions is:
+
+1. Consistent
+2. Inconsistent
+3. Trivial
+4. Singular only
+
+ANSWER: 1
+EXPLANATION: Consistent means having at least one solution (including infinitely many).
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: Pivot columns are identified from:
+
+1. Original matrix A
+2. Reduced echelon form RREF
+3. Transpose matrix
+4. Rightmost augmented column
+
+ANSWER: 1
+EXPLANATION: Always take pivot columns from original matrix A.
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: Zero vector in R^2 is:
+
+1. [0, 0]^T
+2. [1, 1]^T
+3. [0, 1]^T
+4. [1, 0]^T
+
+ANSWER: 1
+EXPLANATION: Origin vector in R^2.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: Transformation T(x) = 0 for all x is:
+
+1. Linear (zero transformation)
+2. Non-linear
+3. Invertible
+4. One-to-one
+
+ANSWER: 1
+EXPLANATION: Zero transformation satisfies both linearity axioms.
+==END==
+
+==QUESTION==
+TOPIC: The Inverse of a Matrix
+TEXT: (A * B)^(-1) =
+
+1. B^(-1) * A^(-1)
+2. A^(-1) * B^(-1)
+3. A * B
+4. B * A
+
+ANSWER: 1
+EXPLANATION: Reverses matrix order upon inversion.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: Dimension of point (origin) {0} is:
+
+1. 0
+2. 1
+3. Undefined
+4. 3
+
+ANSWER: 1
+EXPLANATION: Single point zero space has dimension 0.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: det(A * B) = det(A) * det(B).
+
+1. True
+2. False
+3. Only if A is diagonal
+4. Only for 2x2
+
+ANSWER: 1
+EXPLANATION: Multiplicative property of determinants.
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces, Null Space, Column Space
+TEXT: Column space Col A is subspace of:
+
+1. R^m (where A is m x n)
+2. R^n
+3. R^1
+4. {0}
+
+ANSWER: 1
+EXPLANATION: Columns have m components, so Col A is in R^m.
+==END==
+
+==QUESTION==
+TOPIC: Diagonalization
+TEXT: Matrix A is diagonalizable if A =
+
+1. P * D * P^(-1)
+2. P + D
+3. P * D
+4. D * P
+
+ANSWER: 1
+EXPLANATION: Definition of matrix similarity to diagonal matrix D.
+==END==
+
+==QUESTION==
+TOPIC: Inner Product, Length, and Orthogonality
+TEXT: If u . v = 0, angle between u and v is:
+
+1. 90 degrees (pi/2 radians)
+2. 0 degrees
+3. 180 degrees
+4. 45 degrees
+
+ANSWER: 1
+EXPLANATION: Orthogonal vectors meet at right angle (90 degrees).
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: System x + y = 0, x - y = 0 has solution:
+
+1. x = 0, y = 0
+2. x = 1, y = 1
+3. No solution
+4. Infinitely many solutions
+
+ANSWER: 1
+EXPLANATION: Adding equations yields 2x = 0 -> x = 0, y = 0.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: Matrix in RREF has leading 1s equal to:
+
+1. 1
+2. 0
+3. Any number
+4. -1
+
+ANSWER: 1
+EXPLANATION: Leading entries scaled to 1 in RREF.
+==END==
+
+==QUESTION==
+TOPIC: Linear Independence
+TEXT: Set of 3 non-zero vectors in R^2 is:
+
+1. Linearly dependent (3 > 2)
+2. Linearly independent
+3. A basis for R^2
+4. Orthogonal
+
+ANSWER: 1
+EXPLANATION: p > n (3 > 2) guarantees linear dependence.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Operations
+TEXT: A * I =
+
+1. A
+2. I
+3. 0
+4. A^2
+
+ANSWER: 1
+EXPLANATION: Identity matrix multiplication property.
+==END==
+
+==QUESTION==
+TOPIC: Characterization of Invertible Matrices
+TEXT: If A is n x n and invertible, Ax = b has:
+
+1. Exactly one solution for every b
+2. No solution
+3. Infinitely many solutions
+4. Solution only for b = 0
+
+ANSWER: 1
+EXPLANATION: Unique solution x = A^(-1)b.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: Rank of zero matrix is:
+
+1. 0
+2. 1
+3. n
+4. Undefined
+
+ANSWER: 1
+EXPLANATION: Zero matrix has 0 pivot columns, so rank is 0.
+==END==
+
+==QUESTION==
+TOPIC: Introduction to Determinants
+TEXT: det([[1, 0], [0, 5]]) =
+
+1. 5
+2. 0
+3. 1
+4. 6
+
+ANSWER: 1
+EXPLANATION: Product of diagonal entries: 1 * 5 = 5.
+==END==
+
+==QUESTION==
+TOPIC: Properties of Determinants
+TEXT: Row replacement operation R_1 -> R_1 + 2*R_2:
+
+1. Leaves det(A) unchanged
+2. Multiplies det(A) by 2
+3. Flips det(A) sign
+4. Sets det(A) to 0
+
+ANSWER: 1
+EXPLANATION: Row replacement does not affect determinant value.
+==END==
+
+==QUESTION==
+TOPIC: Eigenvectors and Eigenvalues
+TEXT: Eigenvalues of [[1, 2], [0, 3]] are:
+
+1. 1 and 3
+2. 2 and 0
+3. 4 and 0
+4. 1 and 2
+
+ANSWER: 1
+EXPLANATION: Triangular matrix diagonal entries are 1 and 3.
+==END==
+
+==QUESTION==
+TOPIC: Inner Product, Length, and Orthogonality
+TEXT: Orthogonal projection of y onto u line uses formula proj_u(y) =
+
+1. [(y . u) / (u . u)] * u
+2. (y . u) * u
+3. u / ||u||
+4. y - u
+
+ANSWER: 1
+EXPLANATION: Standard line projection formula.
+==END==
+
+==QUESTION==
+TOPIC: Systems of Linear Equations
+TEXT: A 2x2 linear system represents two lines in:
+
+1. R^2
+2. R^3
+3. R^1
+4. R^4
+
+ANSWER: 1
+EXPLANATION: 2 variables trace lines in 2D space R^2.
+==END==
+
+==QUESTION==
+TOPIC: Row Reduction and Echelon Forms
+TEXT: Echelon form row reduction uses operations called:
+
+1. Elementary row operations
+2. Determinant operations
+3. Eigen operations
+4. Matrix products
+
+ANSWER: 1
+EXPLANATION: Gaussian elimination relies on elementary row operations.
+==END==
+
+==QUESTION==
+TOPIC: Vector Equations
+TEXT: Span{v_1, v_2} is subspace of R^n.
+
+1. True
+2. False
+3. Only if v_1 = 0
+4. Only for 2x2
+
+ANSWER: 1
+EXPLANATION: Any span of vectors forms a valid subspace.
+==END==
+
+==QUESTION==
+TOPIC: Solution Sets of Linear Systems
+TEXT: Homogeneous system solution set is Nul A.
+
+1. True
+2. False
+3. Only for square A
+4. Only if det A != 0
+
+ANSWER: 1
+EXPLANATION: Nul A is defined as solution set to Ax = 0.
+==END==
+
+==QUESTION==
+TOPIC: Linear Transformations
+TEXT: Linear transformation T preserves:
+
+1. Addition and scalar multiplication
+2. Multiplication of vectors
+3. Division
+4. Non-linear terms
+
+ANSWER: 1
+EXPLANATION: Core defining properties of linear transformations.
+==END==
+
+==QUESTION==
+TOPIC: The Inverse of a Matrix
+TEXT: 2x2 matrix [[a, b], [c, d]] is invertible iff:
+
+1. ad - bc != 0
+2. ad + bc != 0
+3. a + b != 0
+4. ac - bd != 0
+
+ANSWER: 1
+EXPLANATION: Determinant ad - bc must be non-zero.
+==END==
+
+==QUESTION==
+TOPIC: Subspaces, Dimension, and Rank
+TEXT: dim(Row A) =
+
+1. rank(A)
+2. dim(Nul A)
+3. n
+4. m
+
+ANSWER: 1
+EXPLANATION: Row space dimension equals rank(A).
+==END==
+
+==QUESTION==
+TOPIC: The Dimension of a Vector Space
+TEXT: Basis for R^2 has:
+
+1. 2 vectors
+2. 1 vector
+3. 3 vectors
+4. 4 vectors
+
+ANSWER: 1
+EXPLANATION: dim(R^2) = 2.
+==END==
+
+==QUESTION==
+TOPIC: The Gram-Schmidt Process
+TEXT: Gram-Schmidt process checks orthogonality using:
+
+1. Dot product = 0
+2. Determinant = 1
+3. Matrix sum
+4. Trace = 0
+
+ANSWER: 1
+EXPLANATION: Dot product zero confirms orthogonality.
+==END==
+
+==QUESTION==
+TOPIC: Least-Squares Problems
+TEXT: Least-squares solution minimizes distance to:
+
+1. b
+2. 0
+3. Col A
+4. Nul A
+
+ANSWER: 1
+EXPLANATION: Finds closest point in Col A to target b.
 ==END==
