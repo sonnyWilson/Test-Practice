@@ -1,0 +1,220 @@
+==QUESTION==
+TOPIC: Linear Equations in Linear Algebra
+TEXT: How many possible solution outcomes exist for any system of linear equations?
+
+1. Exactly 1 or 2
+2. No solution, exactly one solution, or infinitely many solutions
+3. Unique solution or infinitely many solutions only
+4. Exactly zero, one, two, or infinitely many solutions
+
+ANSWER: 2
+EXPLANATION: Every linear system has either no solution (inconsistent), exactly one solution (unique), or infinitely many solutions. There is no middle ground, such as exactly two or three solutions.
+==END==
+
+==QUESTION==
+TOPIC: Linear Equations in Linear Algebra
+TEXT: When identifying pivot columns for a linear space or subspace determination, from which matrix must the original vectors be selected?
+
+1. The fully reduced row echelon form (RREF) matrix
+2. Any intermediate row echelon matrix
+3. The original matrix prior to row operations
+4. The transpose of the reduced matrix
+
+ANSWER: 3
+EXPLANATION: Pivot positions are found by reducing the matrix, but pivot columns must always be identified from the *original* matrix A, not from the row-reduced form.
+==END==
+
+==QUESTION==
+TOPIC: Linear Equations in Linear Algebra
+TEXT: Under what condition is the matrix equation Ax = b consistent for EVERY vector b in R^m?
+
+1. Matrix A has a pivot in every column
+2. Matrix A has a pivot in every row
+3. Matrix A is a square matrix
+4. The homogeneous system Ax = 0 has a nontrivial solution
+
+ANSWER: 2
+EXPLANATION: Ax = b is consistent for every b in R^m if and only if the columns of A span R^m, which is equivalent to A having a pivot position in every row.
+==END==
+
+==QUESTION==
+TOPIC: Linear Equations in Linear Algebra
+TEXT: Which of the following conditions automatically imply that a set of vectors {v1, v2, ..., vp} in R^n is linearly dependent? (Select TWO.)
+
+1. The number of vectors p is strictly greater than n (p > n)
+2. The set contains the zero vector
+3. The vectors are all orthogonal to each other
+4. The set spans R^n
+
+ANSWER: 1,2
+EXPLANATION: By shortcut theorems: (1) If p > n, there are more vectors than dimensions, guaranteeing at least one free variable and linear dependence. (2) Any set containing the zero vector is automatically linearly dependent.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Algebra
+TEXT: Let A be an n x n invertible matrix. According to the Invertible Matrix Theorem (IMT), which of the following statements are equivalent to A being invertible? (Select TWO.)
+
+1. The determinant of A is nonzero (det A != 0)
+2. The columns of A span R^n
+3. Ax = 0 has infinitely many solutions
+4. A has at most n - 1 pivot positions
+
+ANSWER: 1,2
+EXPLANATION: The IMT states that for an n x n matrix, invertibility is equivalent to having n pivot positions, det(A) != 0, linearly independent columns, columns spanning R^n, and Ax = 0 having only the trivial solution.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Algebra
+TEXT: What is the correct inverse matrix formula for a 2x2 matrix A = [[a, b], [c, d]] where det(A) != 0?
+
+1. (1 / (ad - bc)) * [[a, b], [c, d]]
+2. (1 / (ad - bc)) * [[d, -b], [-c, a]]
+3. (1 / (ad + bc)) * [[d, -b], [-c, a]]
+4. (1 / (ad - bc)) * [[-a, c], [b, -d]]
+
+ANSWER: 2
+EXPLANATION: The standard 2x2 inverse formula swaps the main diagonal entries (a and d), negates the off-diagonal entries (b and c), and scales the matrix by 1 / det(A), where det(A) = ad - bc.
+==END==
+
+==QUESTION==
+TOPIC: Matrix Algebra
+TEXT: For an m x n matrix A, what is the relationship given by the Rank-Nullity Theorem?
+
+1. dim(Nul A) + rank(A) = m (number of rows)
+2. dim(Nul A) + rank(A) = n (number of columns)
+3. dim(Col A) + dim(Row A) = n
+4. rank(A) - dim(Nul A) = n
+
+ANSWER: 2
+EXPLANATION: The Rank-Nullity Theorem states that for any matrix with n columns, dim(Nul A) + rank(A) = n, where rank(A) is dim(Col A) or the number of pivot columns.
+==END==
+
+==QUESTION==
+TOPIC: Determinants
+TEXT: How does performing a row replacement operation (Ri -> Ri + k*Rj) affect the determinant of a square matrix A?
+
+1. It multiplies the determinant by k
+2. It changes the sign of the determinant
+3. It leaves the determinant unchanged
+4. It sets the determinant to zero
+
+ANSWER: 3
+EXPLANATION: Row replacement operations do not alter the determinant of a matrix. Row swaps flip the sign, and scaling a row by k scales the determinant by k.
+==END==
+
+==QUESTION==
+TOPIC: Determinants
+TEXT: If A is an n x n matrix and c is a scalar, what is det(cA)?
+
+1. c * det(A)
+2. (c^n) * det(A)
+3. (n^c) * det(A)
+4. det(A) / c
+
+ANSWER: 2
+EXPLANATION: Scaling an entire n x n matrix by c scales each of its n rows by c. Therefore, c is factored out n times, yielding det(cA) = (c^n) * det(A).
+==END==
+
+==QUESTION==
+TOPIC: Determinants
+TEXT: When applying Cramer's Rule to solve Ax = b for x_i, how is the matrix A_i constructed?
+
+1. By replacing row i of A with b
+2. By replacing column i of A with b
+3. By removing column i from A
+4. By augmenting A with b as an additional column
+
+ANSWER: 2
+EXPLANATION: In Cramer's Rule, A_i is created by replacing column i of A with the constant vector b. Then x_i = det(A_i) / det(A).
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces
+TEXT: Which of the following conditions must be satisfied for a subset H of R^n to be a subspace? (Select TWO.)
+
+1. H contains the zero vector
+2. H is closed under vector addition and scalar multiplication
+3. H contains strictly non-zero vectors
+4. The dimension of H is equal to n
+
+ANSWER: 1,2
+EXPLANATION: A subspace H must meet three properties: (1) contain the zero vector, (2) be closed under addition (u + v in H for u, v in H), and (3) be closed under scalar multiplication (c*u in H).
+==END==
+
+==QUESTION==
+TOPIC: Vector Spaces
+TEXT: What is the dimension of the Null Space of an m x n matrix A with 3 pivot columns?
+
+1. 3
+2. m - 3
+3. n - 3
+4. m + n - 3
+
+ANSWER: 3
+EXPLANATION: By the Rank-Nullity Theorem, dim(Nul A) + rank(A) = n. Since rank(A) is the number of pivot columns (3), dim(Nul A) = n - 3 (the number of free variables).
+==END==
+
+==QUESTION==
+TOPIC: Eigenvalues and Eigenvectors
+TEXT: How can you immediately determine the eigenvalues of a triangular or block triangular matrix?
+
+1. By calculating the trace of the matrix
+2. By reading the entries along the main diagonal
+3. By row reducing the matrix to RREF
+4. By computing the dot product of the first and last rows
+
+ANSWER: 2
+EXPLANATION: For triangular and block-triangular matrices, the eigenvalues are simply the diagonal entries (or the combined eigenvalues of each diagonal block).
+==END==
+
+==QUESTION==
+TOPIC: Eigenvalues and Eigenvectors
+TEXT: An n x n matrix A is diagonalizable if and only if which condition holds?
+
+1. A has det(A) != 0
+2. A has n linearly independent eigenvectors
+3. A is symmetric and upper triangular
+4. A has no zero entries
+
+ANSWER: 2
+EXPLANATION: An n x n matrix A is diagonalizable (A = P D P^-1) if and only if A has n linearly independent eigenvectors, forming an eigenvector basis for R^n.
+==END==
+
+==QUESTION==
+TOPIC: Orthogonality and Least Squares
+TEXT: Given two non-zero vectors u and v, under what condition are u and v orthogonal?
+
+1. Their vector sum u + v equals zero
+2. Their inner product (dot product) u . v equals zero
+3. Their determinant equals 1
+4. They are scalar multiples of each other
+
+ANSWER: 2
+EXPLANATION: Two vectors u and v are orthogonal if and only if their dot product u . v = 0.
+==END==
+
+==QUESTION==
+TOPIC: Orthogonality and Least Squares
+TEXT: In the Gram-Schmidt process, given an initial set of vectors {x1, x2}, how is the second orthogonal vector v2 calculated?
+
+1. v2 = x2 - ( (x2 . x1) / (x1 . x1) ) * x1
+2. v2 = x2 + ( (x2 . v1) / (v1 . v1) ) * v1
+3. v2 = x2 - ( (x2 . v1) / (v1 . v1) ) * v1
+4. v2 = (x2 . v1) * x1
+
+ANSWER: 3
+EXPLANATION: Gram-Schmidt sets v1 = x1, and v2 = x2 - proj_v1(x2) = x2 - ( (x2 . v1) / (v1 . v1) ) * v1. The ratio is always (target vector . basis vector) / (basis vector . itself).
+==END==
+
+==QUESTION==
+TOPIC: Orthogonality and Least Squares
+TEXT: When a system Ax = b is inconsistent, what normal equation is solved to find the least-squares solution x_hat?
+
+1. A * x_hat = b
+2. (A^T * A) * x_hat = A^T * b
+3. (A * A^T) * x_hat = b
+4. A^T * x_hat = A^T * b
+
+ANSWER: 2
+EXPLANATION: The least-squares solution x_hat minimizes ||Ax - b|| and is calculated by solving the normal equations: (A^T * A) * x_hat = A^T * b.
+==END==
